@@ -15,6 +15,7 @@ import plants from '@/components/Exhibition rental/plants'
 import fireforce from '@/components/Exhibition rental/fireforce'
 import others from '@/components/Exhibition rental/others'
 import shopping from '@/components/Shopping Cart/shopping'
+import order from '@/components/Shopping Cart/order'
 //import home from '@/components/home'
 
 Vue.use(Router)
@@ -98,6 +99,10 @@ module.exports = new Router({
       name: 'shopping',
       component: shopping
     },
-    
+    {
+      path: '/order',
+      name: 'order',
+      component: order
+    },
   ]
 })

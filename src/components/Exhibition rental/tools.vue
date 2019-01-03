@@ -8,7 +8,7 @@
             <image style="width:720px;height:360px;" src="https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1785607224.jpg"/>
         </div>
         <div class="nav">
-            <text class="text-nav" v-for="(item, index) in nav" @click="jump(index)" :class="index === key ? 'active' : ''">{{item}}</text>
+            <text class="text-nav" v-for="(item, index) in nav" :key="index" @click="jump(index)" :class="index === key ? 'active' : ''">{{item}}</text>
         </div>
         <router-view></router-view>
         <buy v-if="isShow" @click="show,cancel"></buy>
@@ -56,15 +56,6 @@
 <style scoped>
     .container{
         width:720px;
-    }
-    .wrapper{
-       flex-direction:row;
-       flex-wrap:wrap-reverse;
-       justify-content:space-between;
-       padding:10px 24px 0 24px;
-    }
-    .card{
-        margin-bottom:20px;
     }
     .header{
         width:720px;
