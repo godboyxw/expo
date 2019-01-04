@@ -13,7 +13,7 @@
 </template>
 
 <script>
-    import Mortal from './Mortal.vue'
+    import Mortal from '../Common/Mortal.vue'
     export default {
         components:{
             Mortal
@@ -23,7 +23,7 @@
                 arr:['展会信息','去买票','餐饮预定','媒体资讯','泊车寻车','全景国博','通勤车查询','问题反馈','行李托管','展品运输','清洁服务','清洁服务','清洁服务','清洁服务'],
                 isShow:true,
                 numSlice:9,
-                router : ['/','/tickets','/food','/news','/tools']
+                router : ['/producer','/tickets','/food','/news','/tools']
             }
         },
         methods: {

@@ -1,22 +1,19 @@
 <template>
     <div>
-        <div class="header">
-            <text class="icon-back" :style="{fontFamily:'iconfont',color:'gray',fontSize:'32px'}" @click="back" >{{"\ue618"}}</text>
-            <text class="text" @click="back" style=" flex:1;text-align:center;line-height:38px;font-size:40px;font-family:SourceHanSansCN-Medium;font-weight:500;color:rgba(68,68,68,1);">索尼展商</text>
-        </div>
-        <div class="banner" style=" width:720px;height:420px;background:rgba(255,255,255,1);position:relative;border-bottom:1px solid #EEEEEE;">
-           <div class="images" v-if="n===index" v-for="(item,index) in images" :key="index" style="width:720px;height:420px;position:absolute;flex-direction:row;justify-content:center;align-items:center;" > 
+        <headerTop :title="title" :router="router"></headerTop>
+        <div class="banner">
+            <div class="images" v-for="(item, index2) in images" :key="index2" v-if="n === index2" > 
             <image :src="item" style="width:660px;height:288px;"/>
-           </div>
-           <div class="banner-point" style="flex-direction:row;position:absolute;justify-content:space-between;width:138px;left:306px;bottom:18px;">
-                <div class="point" style=" width:12px;height:12px;background:rgba(229,229,229,1);border-radius:50%;" v-for="(item,index) in images" :class="index===n?'active':''" @click="to(index)"></div>
+            </div>
+            <div class="banner-point">
+                <div class="point" v-for="(item, index) in images" :key="index" :class="index===n?'active':''"  @click="to(index)"></div>
             </div>
         </div>
-        <div class="desc" style="width:720px;height:120px;background:rgba(255,255,255,1);padding-left:34px;justify-content:center;"><text class="desc_text" style="line-height:36px;font-size:36px;font-family:SourceHanSansCN-Medium;font-weight:500;color:rgba(68,68,68,1);">索尼a5100相机（含15-45mm镜头）</text></div>
-        <div class="detail" style="width:720px;height:90px;background:rgba(255,255,255,1);padding-left:51px;justify-content:center;"><text class="detail_text" style="line-height:36px;font-size:36px;font-family:SourceHanSansCN-Medium;font-weight:500;color:rgba(68,68,68,1);">产品详情</text></div>
-        <div class="info" style=" width:720px;background:rgba(255,255,255,1);justify-content:center;align-items:center;">
+        <div class="desc"><text class="desc_text">索尼a5100相机（含15-45mm镜头）</text></div>
+        <div class="detail"><text class="detail_text">产品详情</text></div>
+        <div class="info">
             <image style="width:660px;height:300px" src="http://img2.imgtn.bdimg.com/it/u=985885405,2696595433&fm=11&gp=0.jpg"/>
-            <text class="info_text" style="margin-top:90px;">精彩细节展示</text>
+            <text class="info_text">精彩细节展示</text>
             <image style="width:660px;height:300px" src="http://img2.imgtn.bdimg.com/it/u=985885405,2696595433&fm=11&gp=0.jpg"/>
             <text class="info_text">精彩细节展示</text>
         </div>
@@ -28,7 +25,11 @@
 </template>
 
 <script>
+    import headerTop from '../Common/headerTop'
     export default {
+        components:{
+            headerTop
+        },
         data() {
             return {
                 images:[
@@ -39,25 +40,23 @@
                     'http://img0.imgtn.bdimg.com/it/u=2405186627,2703499517&fm=200&gp=0.jpg'
                     ],
                 n:0,
-                timer: null
+                title : '索尼展商',
+                router : '/goods'
             }
         },
         methods: {
             add(){
                 this.n++;
-                this.n%=this.images.length
+                this.n %= this.images.length
             },
             to(){
-                this.n=index;
-            },
-            back(){
-                this.$router.push('/')
+                this.n = index;
             }
            
         },
         mounted() {
             setInterval(()=> {
-                this.add()
+                this.add();
             }, 1300)
         }
         
@@ -65,30 +64,6 @@
 </script>
 
 <style scoped>
-    .header{
-        width:720px;
-        height:96px;
-        position:relative;
-        border-bottom:1px solid #D0E8FF;
-        background:rgba(255,255,255,1);
-        flex-direction:row;
-        align-items:center;
-        
-    }
-    .icon-back{
-        position:absolute;
-        top:32px;
-        left:32px;
-    }
-    .text{
-        flex:1;
-        text-align:center;
-        line-height:38px;
-        font-size:40px;
-        font-family:SourceHanSansCN-Medium;
-        font-weight:500;
-        color:rgba(68,68,68,1);
-    }
     .banner{
         width:720px;
         height:420px;
@@ -119,7 +94,7 @@
         border-radius:50%;
     }
     .active{
-        background:rgba(144,218,203,1)!important;
+        background:rgba(144,218,203,1);
     }
     .desc{
         width:720px;

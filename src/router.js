@@ -1,22 +1,27 @@
 /*global Vue*/
 import Router from 'vue-router'
-import intro from '@/components/intro'
-import home from '@/components/home'
-import goods from '@/components/goods'
-import seller from '@/components/seller'
-import Banner from '@/components/Banner'
-import foo from '@/components/foo'
-import Display from '@/components/Display'
-import Service from '@/components/Service'
-import tools from '@/components/Exhibition rental/tools'
-import desk from '@/components/Exhibition rental/desk'
-import plants from '@/components/Exhibition rental/plants'
-import fireforce from '@/components/Exhibition rental/fireforce'
-import others from '@/components/Exhibition rental/others'
+import Home from '@/components/Home Page/Home'
+import Display from '@/components/Home Page/Display'
+import Service from '@/components/Home Page/Service'
+
+import Producer from '@/components/Seller Product/Producer'
+import Seller from '@/components/Seller Product/Seller'
+import Goods from '@/components/Seller Product/Goods'
+import Introduction from '@/components/Seller Product/Introduction'
+import Banner from '@/components/Seller Product/Banner'
+
+import tools from '@/components/Exhibition Rental/tools'
+import desk from '@/components/Exhibition Rental/desk'
+import plants from '@/components/Exhibition Rental/plants'
+import fireforce from '@/components/Exhibition Rental/fireforce'
+import others from '@/components/Exhibition Rental/others'
+
 import shopping from '@/components/Shopping Cart/shopping'
 import order from '@/components/Shopping Cart/order'
-import food from '@/components/Food order/food'
-import dish from '@/components/Food order/dish'
+
+import food from '@/components/Food Order/food'
+import dish from '@/components/Food Order/dish'
+
 import news from '@/components/Media News/news'
 
 Vue.use(Router)
@@ -24,38 +29,10 @@ Vue.use(Router)
 module.exports = new Router({
   mode: 'abstract',
   routes: [
-    // {
-    //   path: '/',
-    //   redirect:'/intro',
-    //   name: 'home',
-    //   component: home,
-    //   children:[ 
-    //     {
-    //       path: '/intro',
-    //       name: 'intro',
-    //       component: intro
-    //     },
-    //     {
-    //       path: '/goods',
-    //       name: 'goods',
-    //       component: goods
-    //     },
-    //     {
-    //       path: '/seller',
-    //       name: 'seller',
-    //       component: seller
-    //     },
-    //   ]
-    // },
-    {
-      path: '/banner',
-      name: 'Banner',
-      component: Banner
-    },
     {
       path: '/',
-      name: 'foo',
-      component: foo
+      name: 'Home',
+      component: Home
     },
     {
       path: '/display',
@@ -66,6 +43,34 @@ module.exports = new Router({
       path: '/service',
       name: 'Service',
       component: Service
+    },
+    {
+      path: '/producer',
+      name: 'Producer',
+      redirect:'/introduction',
+      component: Producer,
+      children:[
+        {
+          path: '/introduction',
+          name: 'Introduction',
+          component: Introduction
+        },
+        {
+          path: '/seller',
+          name: 'Seller',
+          component: Seller
+        },
+        {
+          path: '/goods',
+          name: 'Goods',
+          component: Goods
+        }
+      ]
+    },
+    {
+      path: '/goods/banner',
+      name: 'Banner',
+      component: Banner
     },
     {
       path: '/tools',

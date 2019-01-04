@@ -1,24 +1,21 @@
 <template>
     <div class="container" v-if="show" >
-        <div class="bgimg"  @click="to">
+        <div class="bgimg">
             <image style="width:720px;height:360px" resize="stretch" src="http://img2.imgtn.bdimg.com/it/u=3830392766,3562967206&fm=26&gp=0.jpg"/>
         </div>
         <div class="header" >
-            <div class="avatar" @click="go"></div>
+            <div class="avatar"></div>
             <div class="info" >
                 <text class="text">索尼展商</text>
                 <text class="pub_time" >展期：2018/8/15-8/18</text>
             </div>
             <div class="nav_btn" >
-                <text class="font"  @click="push">导航</text>
+                <text class="font">导航</text>
             </div>
         </div>
         <div class="tab">
             <text v-for="(item,index) in arr" :key="index" @click="jump(index)" :class="key===index? 'active':''" class="txt">{{item}}</text>
         </div>
-       <!-- <intro v-if="key===0"></intro>
-        <goods  v-if="key===1"></goods>
-        <seller  v-if="key===2"></seller>-->
        <router-view></router-view>
         <div class="map_menu" >
             <text class="business_debate">商业洽谈</text>
@@ -28,9 +25,6 @@
 </template>
 
 <script>
-    import intro from './intro.vue'
-    import goods from './goods.vue'
-    import seller from './seller.vue'
     // var navigator = weex.requireModule('navigator')
     //const navigator = weex.requireModule("navigator");
     // var modal = weex.requireModule('modal')
@@ -39,40 +33,19 @@
             return{
                 key:0,
                 arr:['简介','展品','同期展商'],
-                routers:['/intro','goods','seller'],
+                routers:['/introduction','/goods','/seller'],
                 show:true,
             }
         },
-        components:{
-            intro,
-            goods,
-            seller
-        },
         methods:{
             jump(index){
-                //this.$router.push(url)
                 this.key=index;
-                //this.show=!this.show;
-                // if(this.show){
-                //     this.display=true
-                // }
-               // this.$refs['l'].display="none"
                 this.$router.push(this.routers[index])
-                //windows.location.href(this.routers[index])
                 // navigator.push({url:this.routers[index]})
                 // navigator.push({
                 //     url: "./goods.vue",
                 //     animated: "true"
                 // });
-            },
-            to(){
-                this.$router.push('/foo')
-            },
-             push(){
-                this.$router.push('/tools')
-            },
-            go(){
-                this.$router.push('/food')
             }
         }
     }

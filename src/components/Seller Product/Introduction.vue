@@ -18,9 +18,6 @@
 
 <script>
     export default {
-        // created(){
-        //     console.log(this.data.scale
-        // }
         
     }
 </script>
