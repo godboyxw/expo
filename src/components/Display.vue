@@ -1,6 +1,6 @@
 <template>
-    <div class="display" style="width:750px;height:1280px;position:fixed;top:0;bottom:0;left:0;right:0;">
-        <div class="header" style=" width:750px;height:96px;padding-left:20px;margin-bottom:100px;">
+    <div class="display" style="width:720px;height:1280px;position:fixed;top:0;bottom:0;left:0;right:0;">
+        <div class="header" style=" width:720px;height:96px;padding-left:20px;margin-bottom:100px;">
             <text class="icon-back" :style="{fontFamily:'iconfont',color:'gray',fontSize:'32px'}" @click="back">{{"\ue618"}}</text>
             <text class="text" @click="back" style=" flex:1;margin-left:20px;line-height:40px;font-size:36px;font-family:SourceHanSansCN-Medium;font-weight:500;color:rgba(255,255,255,1);">参展商应用</text>
         </div>
@@ -23,7 +23,7 @@
         },
         methods: {
             back(){
-                this.$router.push('/foo')
+                this.$router.push('/')
             }
         },
     }

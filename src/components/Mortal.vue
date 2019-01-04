@@ -1,11 +1,11 @@
 <template>
    <div>
         <div class='container' style="width:720px;padding-top: 79px;padding-right: 60px;padding-bottom: 68px;padding-left: 60px; border-radius:20px;" v-if="display1">
-            <div class="icon" v-for="(item,key) in arrSlice1" :key="key" style="width:33.33%;margin-bottom:30px;">     
-                <div class="avatar" style=" width:84px;height:84px;margin-bottom: 13px;border-width: 1px;border-radius:42px;">
-                    <image style="width:84px;height:84px;" resize="stretch" src="http://img2.imgtn.bdimg.com/it/u=3830392766,3562967206&fm=26&gp=0.jpg"/>
-                </div>
-                <text class="text" style="height:52px;font-size:28px; line-height:60px;">{{item}}</text> 
+            <div class="icon" v-for="(item,index) in arrSlice1" :key="index" style="width:33.33%;margin-bottom:30px;" @click="jump(index,router)">     
+                    <div class="avatar" style=" width:84px;height:84px;margin-bottom: 13px;border-width: 1px;border-radius:42px;">
+                        <image style="width:84px;height:84px;" resize="stretch" src="http://img2.imgtn.bdimg.com/it/u=3830392766,3562967206&fm=26&gp=0.jpg"/>
+                    </div>
+                    <text class="text1" style="height:52px;font-size:28px; line-height:60px;">{{item}}</text> 
             </div> 
             <div class="bnt" style="position:absolute;bottom:52px;left:350px" v-if="arr.length > 9" v-show="isShow">
                 <div style="width:20px;height:10px;background:rgba(95,67,220,1);border-radius:5px;" @click="show"></div>
@@ -17,7 +17,7 @@
                 <div class="avatar" style=" width:84px;height:84px;margin-bottom: 13px;border-width: 1px;border-radius:42px;">
                     <image style="width:84px;height:84px;" resize="stretch" src="http://img2.imgtn.bdimg.com/it/u=3830392766,3562967206&fm=26&gp=0.jpg"/>
                 </div>
-                <text class="text" style="height:52px;font-size:28px; line-height:60px;">{{item}}</text> 
+                <text class="text1">{{item}}</text> 
             </div>
             <div class="bnt" style="position:absolute;bottom:52px;left:350px">
                 <div style="width:20px;height:10px;background:rgba(95,67,220,1);border-radius:5px;" @click="show"></div>
@@ -33,36 +33,37 @@
     export default {
         props:{
             arr:{
-                type:Array,
+                type : Array,
             },
             isShow:{
-                type:Boolean,
-                default:true
+                type : Boolean,
+                default : true
             },
             numSlice:{
-                type:Number,
-                default:9
-            }
+                type : Number,
+                default : 9
+            },
+            router : Array
         },
         data(){
             return {
-               // dataArr : ['展会信息','会议室预约','展具租赁','广告申请','问题反馈','缴费中心','申请展位','表格填写','特装搭建','展品运输','清洁服务','清洁服务','清洁服务','清洁服务'],
                 arrSlice1 : [],
                 arrSlice2 : [],
-                display1:true,
-                display2:false
+                display1 : true,
+                display2 : false
             }
         },
         mounted(){
             this.arrSlice1 = this.arr.slice(0,this.numSlice);
-            //console.log(this.arrSlice1);
             this.arrSlice2 = this.arr.slice(this.numSlice,this.arr.length);
-            //console.log(this.arrSlice2);
         },  
         methods: {
             show(){
                 this.display1 = !this.display1;
                 this.display2 = !this.display2;
+            },
+            jump(index,router){
+                this.$router.push(router[index])
             }
         },
     }
@@ -72,7 +73,6 @@
 <style scoped >
     .container{
         width:672px;
-       /** height:671px;**/
         margin-left:auto;
         margin-right:auto;
         margin-top: 0;
@@ -112,7 +112,7 @@
         border-radius:42px;
         overflow:hidden;
     }
-    .text{
+    .text1{
         height:52px;
         font-size:28px;
         font-family:DengXian;

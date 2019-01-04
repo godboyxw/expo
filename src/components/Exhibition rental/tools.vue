@@ -31,10 +31,13 @@
             }
         },
         methods: {
-           jump(index){
+            back(){
+                this.$router.push('/')
+            },
+            jump(index){
                this.$router.push(this.routers[index]);
                this.key = index;
-           },
+            },
         //    show(){
         //        this.isShow = false;
         //    }
@@ -95,6 +98,5 @@
     .active{
         color:rgba(8,117,209,1);
         border-bottom:4px solid rgba(8,117,209,1);
-       
     }
 </style>

@@ -51,7 +51,7 @@
 
 <style scoped>
     .lists{
-        width:750px;
+        width:720px;
         background:rgba(255,255,255,1);
     }
     .item{

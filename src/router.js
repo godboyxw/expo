@@ -1,6 +1,5 @@
 /*global Vue*/
 import Router from 'vue-router'
-//import HelloWorld from '@/components/HelloWorld'
 import intro from '@/components/intro'
 import home from '@/components/home'
 import goods from '@/components/goods'
@@ -16,43 +15,45 @@ import fireforce from '@/components/Exhibition rental/fireforce'
 import others from '@/components/Exhibition rental/others'
 import shopping from '@/components/Shopping Cart/shopping'
 import order from '@/components/Shopping Cart/order'
-//import home from '@/components/home'
+import food from '@/components/Food order/food'
+import dish from '@/components/Food order/dish'
+import news from '@/components/Media News/news'
 
 Vue.use(Router)
 
 module.exports = new Router({
   mode: 'abstract',
   routes: [
-    {
-      path: '/',
-      redirect:'/intro',
-      name: 'home',
-      component: home,
-      children:[ 
-        {
-          path: '/intro',
-          name: 'intro',
-          component: intro
-        },
-        {
-          path: '/goods',
-          name: 'goods',
-          component: goods
-        },
-        {
-          path: '/seller',
-          name: 'seller',
-          component: seller
-        },
-      ]
-    },
+    // {
+    //   path: '/',
+    //   redirect:'/intro',
+    //   name: 'home',
+    //   component: home,
+    //   children:[ 
+    //     {
+    //       path: '/intro',
+    //       name: 'intro',
+    //       component: intro
+    //     },
+    //     {
+    //       path: '/goods',
+    //       name: 'goods',
+    //       component: goods
+    //     },
+    //     {
+    //       path: '/seller',
+    //       name: 'seller',
+    //       component: seller
+    //     },
+    //   ]
+    // },
     {
       path: '/banner',
       name: 'Banner',
       component: Banner
     },
     {
-      path: '/foo',
+      path: '/',
       name: 'foo',
       component: foo
     },
@@ -103,6 +104,21 @@ module.exports = new Router({
       path: '/order',
       name: 'order',
       component: order
+    },
+    {
+      path: '/food',
+      name: 'food',
+      component: food
+    },
+    {
+      path: '/dish',
+      name: 'dish',
+      component: dish
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: news
     },
   ]
 })

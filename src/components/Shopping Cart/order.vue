@@ -6,14 +6,18 @@
         </div>
         <div class="content">
             <text class="amount">应付金额 ¥1200</text>
-            <text class="amount">购买数量</text>
+            <text class="count">购买数量</text>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        
+        methods: {
+            back(){
+                this.$router.push('/shopping')
+            }
+        },
     }
 </script>
 
@@ -33,7 +37,6 @@
     .sell{
         flex:1;
         text-align:center;
-        line-height:96px;
         font-size:40px;
         font-family:SourceHanSansCN-Medium;
         font-weight:500;

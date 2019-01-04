@@ -34,7 +34,7 @@
                     //     desc:'艾博斯（Airproce） 空气净化器AL-730',
                     //     rent:300,
                     //     deposit:500
-                    // }  //Props with type Object/Array must use a factory function to return the default value.
+                    // }  //Props with type Object/Array must use a factory function to return the default value.   工厂函数
                     () => {
                         return {
                             src:"http://img1.imgtn.bdimg.com/it/u=1536209972,2621737667&fm=26&gp=0.jpg",
@@ -116,7 +116,7 @@
         height:30px;
         border:1px solid rgba(187,187,187,1);
         text-align:center;
-        line-height: 30px;
+        line-height: 32px;
     }
     .minus{
         color: #EEEEEE
@@ -129,7 +129,10 @@
         height:30px;
         border:1px solid rgba(187,187,187,1);
         text-align:center;
-        line-height: 30px;
-        color:#555555;
+        line-height: 32px;
+        font-size:24px;
+        font-family:SourceHanSansCN-Regular;
+        font-weight:400;
+        color:rgba(85,85,85,1);
     }
 </style>

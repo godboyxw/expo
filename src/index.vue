@@ -19,7 +19,7 @@ export default {
             domModule.addRule('fontFace',{
                 'fontFamily':'iconfont',
                 // 'src':"url(\'http://at.alicdn.com/t/font_952444_mrpbz4sf6q.ttf\')"
-                'src':"url('//at.alicdn.com/t/font_952444_mrpbz4sf6q.ttf')"
+                'src':"url('//at.alicdn.com/t/font_952444_vyvx4et8md.ttf')"
             })
            // console.log(this.$getConfig())
            console.log(weex.config)

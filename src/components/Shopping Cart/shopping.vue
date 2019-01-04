@@ -1,11 +1,8 @@
 <template>
     <div class="container-box">
         <div class="content">
-            <div class="header">
-                <text class="icon-back" :style="{fontFamily:'iconfont',color:'#353535',fontSize:'32px'}" @click="back">{{"\ue618"}}</text>
-                <text class="sell">购物车</text>
-            </div>
-            <div><cart v-for="(item, index) in arr" :key="index" :obj="item"></cart></div>
+            <headerTop :title="title" :router="router"></headerTop>
+            <div class="content-cart"><cart v-for="(item, index) in arr" :key="index" :obj="item"></cart></div>
         </div>
         <div class="footer">
             <text class="total">总金额  ¥5965.00</text>
@@ -16,13 +13,15 @@
 
 <script>
     import cart from './cart'
+    import headerTop from '../Common/headerTop'
     export default {
         components:{
-            cart
+            cart,
+            headerTop
         },
         data(){
             return {
-                arr:[
+                arr : [
                     {
                         src:"http://img1.imgtn.bdimg.com/it/u=1536209972,2621737667&fm=26&gp=0.jpg",
                         desc:'艾博斯（Airproce） 空气净化器AL-730',
@@ -53,7 +52,9 @@
                         rent:300,
                         deposit:500
                     }
-                ]
+                ],
+                title : '购物车',
+                router : '/tools'
             }
         },
         methods:{
@@ -70,14 +71,19 @@
 <style scoped>
     .container-box{
         width:720px;
+        margin:0 auto;
+        /**padding-top:106px;**/
         display: flex; 
         flex-direction: column; 
-       /** background: red;**/
         min-height: 100vh;
     }
     .header{
         width:720px;
         height:96px;
+        /**position:fixed;
+        top:0;
+        left:0;
+        right:0;**/
         padding-left:32px;
         border-bottom:10px solid #EEEEEE;
         background:rgba(255,255,255,1);
@@ -98,13 +104,16 @@
     .content{
         flex:1;
     }
+    .content-cart{
+        /**margin-top:96px;**/
+    }
     .footer{
        /** position: fixed;
         bottom:0;
         left:0;
         right:0;**/
         flex: 0;
-        /**height:146px;  **/   
+        /**height:146px;**/   
     }
     .total{
         width:720px;

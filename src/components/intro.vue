@@ -27,10 +27,10 @@
 
 <style>
     .introduction{
-        width:750px;
+        width:720px;
     }
     .ind-content{
-        width:750px;
+        width:720px;
         height:380px;
         margin-left:auto;
         margin-right:auto;
@@ -51,7 +51,7 @@
         text-align:left;
     }
     .display-content{
-        width:750px;
+        width:720px;
         height:130px;
         margin-left:auto;
         margin-right:auto;
@@ -78,7 +78,7 @@
         color:rgba(152,152,152,1);
     }
     .display-map{
-        width:750px;
+        width:720px;
         height:460px;
         margin-left:auto;
         margin-right:auto;

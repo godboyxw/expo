@@ -1,10 +1,10 @@
 <template>
     <div class="container" v-if="show" >
         <div class="bgimg"  @click="to">
-            <image style="width:750px;height:360px" resize="stretch" src="http://img2.imgtn.bdimg.com/it/u=3830392766,3562967206&fm=26&gp=0.jpg"/>
+            <image style="width:720px;height:360px" resize="stretch" src="http://img2.imgtn.bdimg.com/it/u=3830392766,3562967206&fm=26&gp=0.jpg"/>
         </div>
         <div class="header" >
-            <div class="avatar" ></div>
+            <div class="avatar" @click="go"></div>
             <div class="info" >
                 <text class="text">索尼展商</text>
                 <text class="pub_time" >展期：2018/8/15-8/18</text>
@@ -70,6 +70,9 @@
             },
              push(){
                 this.$router.push('/tools')
+            },
+            go(){
+                this.$router.push('/food')
             }
         }
     }
@@ -77,7 +80,7 @@
 
 <style scoped>
     .container{
-        width:750px;
+        width:720px;
     }
     .active{
        border-bottom-width:4px;
@@ -86,7 +89,7 @@
        color:rgba(29,141,243,1);
     }
     .bgimg{
-        width:750px;
+        width:720px;
         height:360px;
         margin-left:auto;
         margin-right:auto;
@@ -94,7 +97,7 @@
         margin-bottom: 0;
     }
     .header{
-        width:750px;
+        width:720px;
         height:120px;
         margin-left:auto;
         margin-right:auto;
@@ -152,7 +155,7 @@
         text-align:center;
     }
     .tab{
-        width:750px;
+        width:720px;
         height:100px;  
         background:rgba(255,255,255,1);
         border-bottom:1px solid rgba(238,238,238,1);

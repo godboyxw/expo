@@ -4,25 +4,25 @@
             <text class="icon-back" :style="{fontFamily:'iconfont',color:'gray',fontSize:'32px'}" @click="back" >{{"\ue618"}}</text>
             <text class="text" @click="back" style=" flex:1;text-align:center;line-height:38px;font-size:40px;font-family:SourceHanSansCN-Medium;font-weight:500;color:rgba(68,68,68,1);">索尼展商</text>
         </div>
-        <div class="banner" style=" width:750px;height:420px;background:rgba(255,255,255,1);position:relative;border-bottom:1px solid #EEEEEE;">
-           <div class="images" v-if="n===index" v-for="(item,index) in images" :key="index" style="width:750px;height:420px;position:absolute;flex-direction:row;justify-content:center;align-items:center;" > 
+        <div class="banner" style=" width:720px;height:420px;background:rgba(255,255,255,1);position:relative;border-bottom:1px solid #EEEEEE;">
+           <div class="images" v-if="n===index" v-for="(item,index) in images" :key="index" style="width:720px;height:420px;position:absolute;flex-direction:row;justify-content:center;align-items:center;" > 
             <image :src="item" style="width:660px;height:288px;"/>
            </div>
            <div class="banner-point" style="flex-direction:row;position:absolute;justify-content:space-between;width:138px;left:306px;bottom:18px;">
                 <div class="point" style=" width:12px;height:12px;background:rgba(229,229,229,1);border-radius:50%;" v-for="(item,index) in images" :class="index===n?'active':''" @click="to(index)"></div>
             </div>
         </div>
-        <div class="desc" style="width:750px;height:120px;background:rgba(255,255,255,1);padding-left:34px;justify-content:center;"><text class="desc_text" style="line-height:36px;font-size:36px;font-family:SourceHanSansCN-Medium;font-weight:500;color:rgba(68,68,68,1);">索尼a5100相机（含15-45mm镜头）</text></div>
-        <div class="detail" style="width:750px;height:90px;background:rgba(255,255,255,1);padding-left:51px;justify-content:center;"><text class="detail_text" style="line-height:36px;font-size:36px;font-family:SourceHanSansCN-Medium;font-weight:500;color:rgba(68,68,68,1);">产品详情</text></div>
-        <div class="info" style=" width:750px;background:rgba(255,255,255,1);justify-content:center;align-items:center;">
+        <div class="desc" style="width:720px;height:120px;background:rgba(255,255,255,1);padding-left:34px;justify-content:center;"><text class="desc_text" style="line-height:36px;font-size:36px;font-family:SourceHanSansCN-Medium;font-weight:500;color:rgba(68,68,68,1);">索尼a5100相机（含15-45mm镜头）</text></div>
+        <div class="detail" style="width:720px;height:90px;background:rgba(255,255,255,1);padding-left:51px;justify-content:center;"><text class="detail_text" style="line-height:36px;font-size:36px;font-family:SourceHanSansCN-Medium;font-weight:500;color:rgba(68,68,68,1);">产品详情</text></div>
+        <div class="info" style=" width:720px;background:rgba(255,255,255,1);justify-content:center;align-items:center;">
             <image style="width:660px;height:300px" src="http://img2.imgtn.bdimg.com/it/u=985885405,2696595433&fm=11&gp=0.jpg"/>
             <text class="info_text" style="margin-top:90px;">精彩细节展示</text>
             <image style="width:660px;height:300px" src="http://img2.imgtn.bdimg.com/it/u=985885405,2696595433&fm=11&gp=0.jpg"/>
             <text class="info_text">精彩细节展示</text>
         </div>
-        <div class="footer" style=" width:750px;height:96px;background:rgba(255,255,255,1);flex-direction:row;position:fixed;bottom:0;left:0;right:0;">
-            <text class="console" style=" height:96px;font-size:30px;line-height:96px;text-align:center;font-family:SourceHanSansCN-Regular; font-weight:400;color:rgba(68,68,68,1);width:200px;background:rgba(255,255,255,1);">咨询</text>
-            <text class="sell" style="height:96px;font-size:30px;line-height:96px;text-align:center;font-family:SourceHanSansCN-Regular;font-weight:400;color:rgba(68,68,68,1);flex:1; background:rgba(29,141,243,1);">商城预售</text>
+        <div class="footer">
+            <text class="console">咨询</text>
+            <text class="sell">商城预售</text>
         </div>
     </div>
 </template>
