@@ -1,8 +1,8 @@
 <template>
-    <div class="display" style="width:720px;height:1280px;">
-        <div class="header" style=" width:720px;height:96px;padding-left:20px;margin-bottom:100px;">
+    <div class="service">
+        <div class="header">
             <text class="icon-back" :style="{fontFamily:'iconfont',color:'gray',fontSize:'32px'}" @click="back">{{"\ue618"}}</text>
-            <text class="text" @click="back" style=" flex:1;margin-left:20px;line-height:40px;font-size:36px;font-family:SourceHanSansCN-Medium;font-weight:500;color:rgba(255,255,255,1);">服务商应用</text>
+            <text class="text" @click="back">服务商应用</text>
         </div>
         <Mortal :arr="arr" :isShow="isShow" :numSlice="arr.length"></Mortal>
     </div>
@@ -30,12 +30,27 @@
 </script>
 
 <style scoped>
-    .display{
+    .service{
+        width:720px;
+        height:1280px;
         background-image:linear-gradient(0deg,rgba(76,187,250,1) 0%,rgba(127,132,255,1) 78%);
     }
     .header{
+        width:720px;
+        height:96px;
+        padding-left:20px;
+        margin-bottom:100px;
         flex-direction:row;
         align-items:center;
         justify-content:flex-start;
+    }
+    .text{
+        flex:1;
+        margin-left:20px;
+        line-height:40px;
+        font-size:36px;
+        font-family:SourceHanSansCN-Medium;
+        font-weight:500;
+        color:rgba(255,255,255,1);
     }
 </style>

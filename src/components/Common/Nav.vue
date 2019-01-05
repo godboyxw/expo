@@ -18,7 +18,6 @@
         },
         methods: {
              jump(index){
-               //this.$router.push(this.routers[index]);
                this.key = index;
             }
         },
@@ -32,6 +31,7 @@
         align-items:center;
         width:720px;
         height:90px;
+        margin:0 auto;
         background:rgba(255,255,255,1);
     }
     .active{

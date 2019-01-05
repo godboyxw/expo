@@ -24,6 +24,9 @@ import dish from '@/components/Food Order/dish'
 
 import news from '@/components/Media News/news'
 
+import Tickets from '@/components/Buying Tickets/Tickets'
+import Details from '@/components/Buying Tickets/Details'
+
 Vue.use(Router)
 
 module.exports = new Router({
@@ -124,6 +127,16 @@ module.exports = new Router({
       path: '/news',
       name: 'news',
       component: news
+    },
+    {
+      path: '/tickets',
+      name: 'Tickets',
+      component: Tickets
+    },
+    {
+      path: '/tickets/detail',
+      name: 'Details',
+      component: Details
     },
   ]
 })

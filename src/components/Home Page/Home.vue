@@ -1,13 +1,13 @@
 <template>
-   <div style="width:720px;position:relative;">
-        <div class="header" style="width:720px;height:500px;position:fixed;top:0;background:linear-gradient(0deg,rgba(76,187,250,1) 0%,rgba(127,132,255,1) 78%);" >
-            <text style="width:720px;line-height:40px;font-size:36px;font-family:MicrosoftYaHei;font-weight:400;color:#FFFFFF;padding-left:24px;padding-top:72px;">武汉国际博览中心</text>
+   <div class="home">
+        <div class="header">
+            <text class="text">武汉国际博览中心</text>
         </div>
-        <Mortal :arr="arr" :isShow="isShow" :numSlice="numSlice" :router="router" style="position:absolute;top:-250px;z-index:100;"></Mortal>
+        <Mortal class="mortal" :arr="arr" :isShow="isShow" :numSlice="numSlice" :router="router"></Mortal>
         <div class="tab">
-            <text class="container" style="color:red">举办方</text>
-            <text class="container"  @click="push">参展商</text>
-            <text class="container"  @click="push">服务商</text>
+            <router-link to="/"><text class="container active">举办方</text></router-link>
+            <router-link to="/display"><text class="container">参展商</text></router-link>
+            <router-link to="/service"><text class="container">服务商</text></router-link>
         </div>
    </div>
 </template>
@@ -25,23 +25,39 @@
                 numSlice:9,
                 router : ['/producer','/tickets','/food','/news','/tools']
             }
-        },
-        methods: {
-            push(){
-                this.$router.push('/display');
-                this.$router.push('/service');
-            }
-        },
+        }
     }
 </script>
 
 <style scoped>
+    .home{
+        width:720px;
+        margin:0 auto;
+        position:relative;
+    }
     .header{
         width:720px;
         height:500px;
         position:fixed;
         top:0;
         background:linear-gradient(0deg,rgba(76,187,250,1) 0%,rgba(127,132,255,1) 78%);
+    }
+    .text{
+        width:720px;
+        line-height:40px;
+        font-size:36px;
+        font-family:MicrosoftYaHei;
+        font-weight:400;
+        color:#FFFFFF;
+        padding-left:24px;
+        padding-top:72px;
+    }
+    .mortal{
+        margin:0 auto;
+        position:absolute;
+        left:24px;
+        top:-250px;
+        z-index:100;
     }
     .tab{
         width:720px;
@@ -56,5 +72,8 @@
         line-height:96px;
         flex:1;
         text-align:center;
+    }
+    .active{
+        color:red;
     }
 </style>

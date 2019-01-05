@@ -1,7 +1,5 @@
 <template>
   <div class="wrapper">
-    <!--<image :src="logo" class="logo" />
-    <text class="greeting">The environment is ready!</text>-->
     <router-view/>
   </div>
 </template>
@@ -18,8 +16,7 @@ export default {
             var domModule=weex.requireModule("dom");
             domModule.addRule('fontFace',{
                 'fontFamily':'iconfont',
-                // 'src':"url(\'http://at.alicdn.com/t/font_952444_mrpbz4sf6q.ttf\')"
-                'src':"url('//at.alicdn.com/t/font_952444_vyvx4et8md.ttf')"
+                'src':"url('//at.alicdn.com/t/font_952444_9tzyw3fgewu.ttf')"
             })
            // console.log(this.$getConfig())
            console.log(weex.config)

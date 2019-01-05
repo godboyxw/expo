@@ -5,7 +5,7 @@
             <text class="icon-search" :style="{fontFamily:'iconfont',color:'black',fontSize:'32px'}">{{"\ue615"}}</text>
             <div class="all">
                 <text class="all_txt">全部</text>
-                <text class="icon-pulldown" :style="{fontFamily:'iconfont',color:'gray',fontSize:'32px'}" @click="setIcon">{{fontName}}</text>
+                <text class="icon-pulldown" :style="{fontFamily:'iconfont',color:'gray',fontSize:'32px'}" @click="show = !show">{{show? '\ue616' : '\ue617'}}</text>
                 <list class="lists" v-if="show">
                     <cell v-for="(num,key) in lists" :key="key">
                         <div class="panel">
@@ -54,19 +54,11 @@
                         text:'索尼a5100相机（含1...'
                     }
                 ],
-                fontName:"\ue617",
                 lists:['潮玩科技','家庭影像','音响设备','视频游戏','数码影像','数码配件'],
                 show:false
             }
         },
         methods:{
-            setIcon(){
-                this.fontName = "\ue616";
-                this.show=!this.show;
-                if(this.show){
-                    this.fontName= "\ue617";
-                }
-            },
             push(){
                 this.$router.push('/goods/banner')
             }

@@ -1,7 +1,14 @@
 <template>
-    <div class="container" v-if="show" >
+    <div class="container" >
         <div class="bgimg">
             <image style="width:720px;height:360px" resize="stretch" src="http://img2.imgtn.bdimg.com/it/u=3830392766,3562967206&fm=26&gp=0.jpg"/>
+            <div class="icon-box">
+                <text class="icon icon-back" :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}" @click="back">{{"\ue618"}}</text>
+                <div class="icon-wrap">
+                    <text class="icon icon-star" :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}" @click="star">{{"\ue61d"}}</text>
+                    <text class="icon icon-share" :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}" @click="share">{{"\ue61e"}}</text>
+                </div>
+            </div>
         </div>
         <div class="header" >
             <div class="avatar"></div>
@@ -33,8 +40,7 @@
             return{
                 key:0,
                 arr:['简介','展品','同期展商'],
-                routers:['/introduction','/goods','/seller'],
-                show:true,
+                routers:['/introduction','/goods','/seller']
             }
         },
         methods:{
@@ -46,6 +52,9 @@
                 //     url: "./goods.vue",
                 //     animated: "true"
                 // });
+            },
+            back(){
+                this.$router.push('/')
             }
         }
     }
@@ -54,6 +63,26 @@
 <style scoped>
     .container{
         width:720px;
+    }
+    .icon-box{
+        width:720px;
+        padding:0 32px;
+        position:absolute;
+        bottom:238px;
+        left:0;
+        flex-direction:row;
+        justify-content:space-between;
+    }
+    .icon{
+        width:48px;
+        height:48px;
+        background:rgba(255,255,255,0.3);
+        border-radius:50%;
+    }
+    .icon-wrap{
+        width:138px;
+        flex-direction:row;
+        justify-content:space-between;
     }
     .active{
        border-bottom-width:4px;
@@ -64,6 +93,7 @@
     .bgimg{
         width:720px;
         height:360px;
+        position:relative;
         margin-left:auto;
         margin-right:auto;
         margin-top: 0;
