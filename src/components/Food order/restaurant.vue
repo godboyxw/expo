@@ -25,9 +25,7 @@
         },
         methods: {
             next(){
-                console.log(0)
                 this.$router.push('/dish')
-                console.log(1)
             }
         },
     }
