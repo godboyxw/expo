@@ -42,11 +42,11 @@ export default {
 
 <style scoped>
 .advice{
- width:720px;
+ width:750px;
  min-height:100vh;
 }
 .phone{
-  width:720px;
+  width:750px;
   height:70px;
   padding:0 39px 0 46px;
   background:rgba(255,255,255,1);
@@ -88,7 +88,7 @@ export default {
   color:rgba(84,174,255,1);
 }
 .info{
-  width:720px;
+  width:750px;
   height:70px;
   padding-left:33px;
   background:#F5FAFF;
@@ -99,7 +99,7 @@ export default {
   color:rgba(153,153,153,1);
 }
 .desc{
-  width:720px;
+  width:750px;
   height:300px;
   padding-top:29px;
   padding-left:29px;
@@ -124,7 +124,7 @@ export default {
   color:rgba(187,187,187,1);
 }
 .photo{
-  width:720px;
+  width:750px;
   height:300px;
   padding-top:29px;
   padding-left:29px;

@@ -1,21 +1,23 @@
 <template>
-    <div>
-        <headerTop :title="title" :router="router"></headerTop>
-        <div class="banner">
-            <div class="images" v-for="(item, index2) in images" :key="index2" v-if="n === index2" >
-            <image :src="item" style="width:660px;height:288px;"/>
+    <div class="wrapper">
+        <div class="content">
+            <headerTop :title="title" :router="router"></headerTop>
+            <div class="banner">
+                <div class="images" v-for="(item, index2) in images" :key="index2" v-if="n === index2" >
+                <image :src="item" style="width:660px;height:288px;"/>
+                </div>
+                <div class="banner-point">
+                    <div class="point" v-for="(item, index) in images" :key="index" :class="index===n?'active':''"  @click="to(index)"></div>
+                </div>
             </div>
-            <div class="banner-point">
-                <div class="point" v-for="(item, index) in images" :key="index" :class="index===n?'active':''"  @click="to(index)"></div>
+            <div class="desc"><text class="desc_text">索尼a5100相机（含15-45mm镜头）</text></div>
+            <div class="detail"><text class="detail_text">产品详情</text></div>
+            <div class="info">
+                <image style="width:660px;height:300px" src="http://img2.imgtn.bdimg.com/it/u=985885405,2696595433&fm=11&gp=0.jpg"/>
+                <text class="info_text">精彩细节展示</text>
+                <image style="width:660px;height:300px" src="http://img2.imgtn.bdimg.com/it/u=985885405,2696595433&fm=11&gp=0.jpg"/>
+                <text class="info_text">精彩细节展示</text>
             </div>
-        </div>
-        <div class="desc"><text class="desc_text">索尼a5100相机（含15-45mm镜头）</text></div>
-        <div class="detail"><text class="detail_text">产品详情</text></div>
-        <div class="info">
-            <image style="width:660px;height:300px" src="http://img2.imgtn.bdimg.com/it/u=985885405,2696595433&fm=11&gp=0.jpg"/>
-            <text class="info_text">精彩细节展示</text>
-            <image style="width:660px;height:300px" src="http://img2.imgtn.bdimg.com/it/u=985885405,2696595433&fm=11&gp=0.jpg"/>
-            <text class="info_text">精彩细节展示</text>
         </div>
         <div class="footer">
             <text class="console">咨询</text>
@@ -64,15 +66,22 @@ export default {
 </script>
 
 <style scoped>
+.wrapper{
+    width:750px;
+    min-height:100vh;
+}
+.content{
+    flex:1;
+}
 .banner{
-    width:720px;
+    width:750px;
     height:420px;
     background:rgba(255,255,255,1);
     position:relative;
     border-bottom:1px solid #EEEEEE;
 }
 .images{
-    width:720px;
+    width:750px;
     height:420px;
     position:absolute;
     flex-direction:row;
@@ -97,7 +106,7 @@ export default {
     background:rgba(144,218,203,1);
 }
 .desc{
-    width:720px;
+    width:750px;
     height:120px;
     background:rgba(255,255,255,1);
     padding-left:34px;
@@ -111,7 +120,7 @@ export default {
     color:rgba(68,68,68,1);
 }
 .detail{
-    width:720px;
+    width:750px;
     height:90px;
     background:rgba(255,255,255,1);
     padding-left:51px;
@@ -125,7 +134,7 @@ export default {
     color:rgba(68,68,68,1);
 }
 .info{
-    width:720px;
+    width:750px;
     background:rgba(255,255,255,1);
     justify-content:center;
     align-items:center;
@@ -134,14 +143,11 @@ export default {
     margin-top:90px;
 }
 .footer{
-    width:720px;
+    flex:0;
+    width:750px;
     height:96px;
     background:rgba(255,255,255,1);
     flex-direction:row;
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
 }
 .console,.sell{
     height:96px;

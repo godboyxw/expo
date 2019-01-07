@@ -1,15 +1,19 @@
 <template>
-   <div class="home">
-        <div class="header">
-            <text class="text">武汉国际博览中心</text>
-        </div>
-        <Mortal class="mortal" :arr="arr" :isShow="isShow" :numSlice="numSlice" :router="router"></Mortal>
-        <div class="tab">
-            <router-link to="/"><text class="txt active">举办方</text></router-link>
-            <router-link to="/display"><text class="txt">参展商</text></router-link>
-            <router-link to="/service"><text class="txt">服务商</text></router-link>
-        </div>
-   </div>
+  <div class="home">
+    <div class="header">
+      <text class="text">武汉国际博览中心</text>
+    </div>
+    <Mortal class="mortal"
+            :arr="arr"
+            :isShow="isShow"
+            :numSlice="numSlice"
+            :router="router"></Mortal>
+    <div class="tab">
+      <router-link to="/"><text class="txt active">举办方</text></router-link>
+      <router-link to="/display"><text class="txt">参展商</text></router-link>
+      <router-link to="/service"><text class="txt">服务商</text></router-link>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -30,49 +34,53 @@ export default {
 </script>
 
 <style scoped>
-.home{
-    width:720px;
-    min-height:100vh;
-    margin:0 auto;
-    position:relative;
+.home {
+  width: 750px;
+  min-height: 100vh;
+  margin: 0 auto;
+  position: relative;
 }
-.header{
-    width:720px;
-    height:500px;
-    background:linear-gradient(0deg,rgba(76,187,250,1) 0%,rgba(127,132,255,1) 78%);
+.header {
+  width: 750px;
+  height: 500px;
+  background: linear-gradient(
+    0deg,
+    rgba(76, 187, 250, 1) 0%,
+    rgba(127, 132, 255, 1) 78%
+  );
 }
-.text{
-    width:720px;
-    line-height:40px;
-    font-size:36px;
-    font-family:MicrosoftYaHei;
-    font-weight:400;
-    color:#FFFFFF;
-    padding-left:24px;
-    padding-top:72px;
+.text {
+  width: 750px;
+  line-height: 40px;
+  font-size: 36px;
+  font-family: MicrosoftYaHei;
+  font-weight: 400;
+  color: #ffffff;
+  padding-left: 24px;
+  padding-top: 72px;
 }
-.mortal{
-    margin:0 auto;
-    position:absolute;
-    left:24px;
-    top:400px;
-    z-index:100;
+.mortal {
+  margin: 0 auto;
+  position: absolute;
+  left: 39px;
+  top: 400px;
+  z-index: 100;
 }
-.tab{
-    width:720px;
-    flex-direction:row;
-    background:rgba(255,255,255,1);
-    position:fixed;
-    bottom:0;
+.tab {
+  width: 750px;
+  flex-direction: row;
+  background: rgba(255, 255, 255, 1);
+  position: fixed;
+  bottom: 0;
 }
-.txt{
-    width:250px;
-    height:96px;
-    line-height:96px;
-    flex:1;
-    text-align:center;
+.txt {
+  width: 250px;
+  height: 96px;
+  line-height: 96px;
+  flex: 1;
+  text-align: center;
 }
-.active{
-    color:red;
+.active {
+  color: red;
 }
 </style>

@@ -62,7 +62,7 @@ export default {
 
 <style scoped>
 .container{
-    width:720px;
+    width:750px;
     background:rgba(0,0,0,0.8);
     margin:0 auto;
     position:fixed;
@@ -72,7 +72,7 @@ export default {
     right:0;
 }
 .wrapper{
-    width:720px;
+    width:750px;
     height:954px;
     margin:0 auto;
     opacity:1;

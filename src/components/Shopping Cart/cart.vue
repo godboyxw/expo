@@ -50,7 +50,7 @@ export default {
 
 <style scoped>
 .container{
-    width:720px;
+    width:750px;
     height:280px;
     background:rgba(255,255,255,1);
     padding-bottom:20px;

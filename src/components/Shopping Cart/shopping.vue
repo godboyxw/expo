@@ -1,14 +1,16 @@
 <template>
-    <div class="container-box">
-        <div class="content">
-            <headerTop :title="title" :router="router"></headerTop>
-            <div class="content-cart"><cart v-for="(item, index) in arr" :key="index" :obj="item"></cart></div>
-        </div>
-        <div class="footer">
-            <text class="total">总金额  ¥5965.00</text>
-            <text class="account" @click="jump">结算</text>
-        </div>
+  <div class="container-box">
+    <div class="content">
+      <headerTop :title="title" :router="router"></headerTop>
+      <div class="content-cart">
+        <cart v-for="(item, index) in arr" :key="index" :obj="item"></cart>
+      </div>
     </div>
+    <div class="footer">
+      <text class="total">总金额 ¥5965.00</text>
+      <text class="account" @click="jump">结算</text>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -69,49 +71,47 @@ export default {
 </script>
 
 <style scoped>
-.container-box{
-    width:720px;
-    margin:0 auto;
-    /**padding-top:106px;**/
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.container-box {
+  width: 750px;
+  margin: 0 auto;
+  /**padding-top:106px;**/
+  min-height: 100vh;
 }
-.content{
-    flex:1;
+.content {
+  flex: 1;
 }
-.content-cart{
-    /**margin-top:96px;**/
+.content-cart {
+  /**margin-top:96px;**/
 }
-.footer{
-    /** position: fixed;
+.footer {
+  /** position: fixed;
     bottom:0;
     left:0;
     right:0;**/
-    flex: 0;
-    /**height:146px;**/
+  flex: 0;
+  /**height:146px;**/
 }
-.total{
-    width:720px;
-    height:50px;
-    background:rgba(255,255,255,1);
-    border-top:6px solid #EEEEEE;
-    text-align:center;
-    line-height:50px;
-    font-size:28px;
-    font-family:SourceHanSansCN-Regular;
-    font-weight:400;
-    color:rgba(85,85,85,1);
+.total {
+  width: 750px;
+  height: 50px;
+  background: rgba(255, 255, 255, 1);
+  border-top: 6px solid #eeeeee;
+  text-align: center;
+  line-height: 50px;
+  font-size: 28px;
+  font-family: SourceHanSansCN-Regular;
+  font-weight: 400;
+  color: rgba(85, 85, 85, 1);
 }
-.account{
-    width:720px;
-    height:90px;
-    background:rgba(8,117,209,1);
-    text-align:center;
-    line-height:90px;
-    font-size:32px;
-    font-family:SourceHanSansCN-Regular;
-    font-weight:400;
-    color:rgba(255,255,255,1);
+.account {
+  width: 750px;
+  height: 90px;
+  background: rgba(8, 117, 209, 1);
+  text-align: center;
+  line-height: 90px;
+  font-size: 32px;
+  font-family: SourceHanSansCN-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
 }
 </style>

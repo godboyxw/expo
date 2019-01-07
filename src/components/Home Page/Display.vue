@@ -1,11 +1,16 @@
 <template>
-    <div class="display">
-        <div class="header">
-            <text class="icon-back" :style="{fontFamily:'iconfont',color:'gray',fontSize:'32px'}" @click="back">{{"\ue618"}}</text>
-            <text class="text" @click="back">参展商应用</text>
-        </div>
-        <Mortal :arr="arr" :isShow="isShow" :numSlice="numSlice"></Mortal>
+  <div class="display">
+    <div class="header">
+      <text class="icon-back"
+            :style="{fontFamily:'iconfont',color:'gray',fontSize:'32px'}"
+            @click="back">{{"\ue618"}}</text>
+      <text class="text"
+            @click="back">参展商应用</text>
     </div>
+    <Mortal :arr="arr"
+            :isShow="isShow"
+            :numSlice="numSlice"></Mortal>
+  </div>
 </template>
 
 <script>
@@ -30,27 +35,31 @@ export default {
 </script>
 
 <style scoped>
-.display{
-    width:720px;
-    min-height:100vh;
-    background-image:linear-gradient(0deg,rgba(76,187,250,1) 0%,rgba(127,132,255,1) 78%);
+.display {
+  width: 750px;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    0deg,
+    rgba(76, 187, 250, 1) 0%,
+    rgba(127, 132, 255, 1) 78%
+  );
 }
-.header{
-    width:720px;
-    height:96px;
-    padding-left:20px;
-    margin-bottom:100px;
-    flex-direction:row;
-    align-items:center;
-    justify-content:flex-start;
+.header {
+  width: 750px;
+  height: 96px;
+  padding-left: 20px;
+  margin-bottom: 100px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
-.text{
-    flex:1;
-    margin-left:20px;
-    line-height:40px;
-    font-size:36px;
-    font-family:SourceHanSansCN-Medium;
-    font-weight:500;
-    color:rgba(255,255,255,1);
+.text {
+  flex: 1;
+  margin-left: 20px;
+  line-height: 40px;
+  font-size: 36px;
+  font-family: SourceHanSansCN-Medium;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
 }
 </style>
