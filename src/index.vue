@@ -12,19 +12,23 @@ export default {
       logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png'
     }
   },
-   created:function () {
-            var domModule=weex.requireModule("dom");
-            domModule.addRule('fontFace',{
-              'fontFamily':'iconfont',
-              'src':"url('//at.alicdn.com/t/font_952444_9tzyw3fgewu.ttf')"
-            }),
-            domModule.addRule('fontFace',{
-              'fontFamily':'SourceHanSansCN-Medium',
-              'src':"url('src/assets/fonts/SourceHanSansCN-Medium.ttf')"
-            })
-           // console.log(this.$getConfig())
-           console.log(weex.config)
-        }
+  created () {
+    var domModule = weex.requireModule('dom')
+    domModule.addRule('fontFace', {
+      'fontFamily': 'iconfont',
+      'src': "url('//at.alicdn.com/t/font_952444_pd4roirxis.ttf')"
+    })
+    domModule.addRule('fontFace', {
+      'fontFamily': 'SourceHanSansCN-Medium',
+      'src': "url('src/assets/fonts/SourceHanSansCN-Medium.ttf')"
+    })
+    domModule.addRule('fontFace', {
+      'fontFamily': 'HYi4gj',
+      'src': "url('src/assets/fonts/汉仪雪君体简.ttf')"
+    })
+    // console.log(this.$getConfig())
+    console.log(weex.config)
+  }
 }
 </script>
 

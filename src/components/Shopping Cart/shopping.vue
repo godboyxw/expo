@@ -12,130 +12,106 @@
 </template>
 
 <script>
-    import cart from './cart'
-    import headerTop from '../Common/headerTop'
-    export default {
-        components:{
-            cart,
-            headerTop
+import cart from './cart'
+import headerTop from '../Common/headerTop'
+export default {
+  components: {
+    cart,
+    headerTop
+  },
+  data () {
+    return {
+      arr: [
+        {
+          src: 'http://img1.imgtn.bdimg.com/it/u=1536209972,2621737667&fm=26&gp=0.jpg',
+          desc: '艾博斯（Airproce） 空气净化器AL-730',
+          rent: 300,
+          deposit: 500
         },
-        data(){
-            return {
-                arr : [
-                    {
-                        src:"http://img1.imgtn.bdimg.com/it/u=1536209972,2621737667&fm=26&gp=0.jpg",
-                        desc:'艾博斯（Airproce） 空气净化器AL-730',
-                        rent:300,
-                        deposit:500
-                    },
-                    {
-                        src:"http://img1.imgtn.bdimg.com/it/u=1536209972,2621737667&fm=26&gp=0.jpg",
-                        desc:'艾博斯（Airproce） 空气净化器AL-730',
-                        rent:300,
-                        deposit:500
-                    },
-                    {
-                        src:"http://img1.imgtn.bdimg.com/it/u=1536209972,2621737667&fm=26&gp=0.jpg",
-                        desc:'艾博斯（Airproce） 空气净化器AL-730',
-                        rent:300,
-                        deposit:500
-                    },
-                    {
-                        src:"http://img1.imgtn.bdimg.com/it/u=1536209972,2621737667&fm=26&gp=0.jpg",
-                        desc:'艾博斯（Airproce） 空气净化器AL-730',
-                        rent:300,
-                        deposit:500
-                    },
-                    {
-                        src:"http://img1.imgtn.bdimg.com/it/u=1536209972,2621737667&fm=26&gp=0.jpg",
-                        desc:'艾博斯（Airproce） 空气净化器AL-730',
-                        rent:300,
-                        deposit:500
-                    }
-                ],
-                title : '购物车',
-                router : '/tools'
-            }
+        {
+          src: 'http://img1.imgtn.bdimg.com/it/u=1536209972,2621737667&fm=26&gp=0.jpg',
+          desc: '艾博斯（Airproce） 空气净化器AL-730',
+          rent: 300,
+          deposit: 500
         },
-        methods:{
-            back(){
-                this.$router.push('/tools')
-            },
-            jump(){
-                 this.$router.push('/order')
-            }
+        {
+          src: 'http://img1.imgtn.bdimg.com/it/u=1536209972,2621737667&fm=26&gp=0.jpg',
+          desc: '艾博斯（Airproce） 空气净化器AL-730',
+          rent: 300,
+          deposit: 500
+        },
+        {
+          src: 'http://img1.imgtn.bdimg.com/it/u=1536209972,2621737667&fm=26&gp=0.jpg',
+          desc: '艾博斯（Airproce） 空气净化器AL-730',
+          rent: 300,
+          deposit: 500
+        },
+        {
+          src: 'http://img1.imgtn.bdimg.com/it/u=1536209972,2621737667&fm=26&gp=0.jpg',
+          desc: '艾博斯（Airproce） 空气净化器AL-730',
+          rent: 300,
+          deposit: 500
         }
+      ],
+      title: '购物车',
+      router: '/tools'
     }
+  },
+  methods: {
+    back () {
+      this.$router.push('/tools')
+    },
+    jump () {
+      this.$router.push('/order')
+    }
+  }
+}
 </script>
 
 <style scoped>
-    .container-box{
-        width:720px;
-        margin:0 auto;
-        /**padding-top:106px;**/
-        display: flex; 
-        flex-direction: column; 
-        min-height: 100vh;
-    }
-    .header{
-        width:720px;
-        height:96px;
-        /**position:fixed;
-        top:0;
-        left:0;
-        right:0;**/
-        padding-left:32px;
-        border-bottom:10px solid #EEEEEE;
-        background:rgba(255,255,255,1);
-        flex-direction:row;
-        justify-content:center;
-        align-items:center;
-    }
-    .sell{
-        flex:1;
-        text-align:center;
-        line-height:96px;
-        font-size:40px;
-        font-family:SourceHanSansCN-Medium;
-        font-weight:500;
-        color:rgba(53,53,53,1);
-        line-height:40px;
-    }
-    .content{
-        flex:1;
-    }
-    .content-cart{
-        /**margin-top:96px;**/
-    }
-    .footer{
-       /** position: fixed;
-        bottom:0;
-        left:0;
-        right:0;**/
-        flex: 0;
-        /**height:146px;**/   
-    }
-    .total{
-        width:720px;
-        height:50px;
-        background:rgba(255,255,255,1);
-        border-top:6px solid #EEEEEE;
-        text-align:center;
-        line-height:50px;
-        font-size:28px;
-        font-family:SourceHanSansCN-Regular;
-        font-weight:400;
-        color:rgba(85,85,85,1);
-    }
-    .account{
-        width:720px;
-        height:90px;
-        background:rgba(8,117,209,1);
-        text-align:center;
-        line-height:90px;
-        font-size:32px;
-        font-family:SourceHanSansCN-Regular;
-        font-weight:400;
-        color:rgba(255,255,255,1);
-    }
+.container-box{
+    width:720px;
+    margin:0 auto;
+    /**padding-top:106px;**/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content{
+    flex:1;
+}
+.content-cart{
+    /**margin-top:96px;**/
+}
+.footer{
+    /** position: fixed;
+    bottom:0;
+    left:0;
+    right:0;**/
+    flex: 0;
+    /**height:146px;**/
+}
+.total{
+    width:720px;
+    height:50px;
+    background:rgba(255,255,255,1);
+    border-top:6px solid #EEEEEE;
+    text-align:center;
+    line-height:50px;
+    font-size:28px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(85,85,85,1);
+}
+.account{
+    width:720px;
+    height:90px;
+    background:rgba(8,117,209,1);
+    text-align:center;
+    line-height:90px;
+    font-size:32px;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+}
 </style>

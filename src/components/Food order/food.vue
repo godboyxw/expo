@@ -8,73 +8,66 @@
 </template>
 
 <script>
-    import restaurant from './restaurant.vue'
-    import headerTop from '../Common/headerTop'
-    export default {
-        components:{
-            restaurant,
-            headerTop
+import restaurant from './restaurant.vue'
+import headerTop from '../Common/headerTop'
+export default {
+  components: {
+    restaurant,
+    headerTop
+  },
+  data () {
+    return {
+      restaurant: [
+        {
+          src: 'https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2',
+          title: '德克士',
+          location: 'A1-015 A1馆前廊道'
         },
-        data(){
-            return {
-                restaurant:[
-                    {
-                        src:"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2",
-                        title:'德克士',
-                        location:'A1-015 A1馆前廊道'
-                    },
-                    {
-                        src:"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2",
-                        title:'德克士',
-                        location:'A1-015 A1馆前廊道'
-                    },
-                    {
-                        src:"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2",
-                        title:'德克士',
-                        location:'A1-015 A1馆前廊道'
-                    },
-                    {
-                        src:"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2",
-                        title:'德克士',
-                        location:'A1-015 A1馆前廊道'
-                    },
-                    {
-                        src:"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2",
-                        title:'德克士',
-                        location:'A1-015 A1馆前廊道'
-                    },
-                    {
-                        src:"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2",
-                        title:'德克士',
-                        location:'A1-015 A1馆前廊道'
-                    },
-                    {
-                        src:"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2",
-                        title:'德克士',
-                        location:'A1-015 A1馆前廊道'
-                    },
-                    {
-                        src:"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2",
-                        title:'德克士',
-                        location:'A1-015 A1馆前廊道'
-                    },
-                ],
-                title : '餐饮预订',
-                router : '/'
-            }
+        {
+          src: 'https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2',
+          title: '德克士',
+          location: 'A1-015 A1馆前廊道'
+        },
+        {
+          src: 'https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2',
+          title: '德克士',
+          location: 'A1-015 A1馆前廊道'
+        },
+        {
+          src: 'https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2',
+          title: '德克士',
+          location: 'A1-015 A1馆前廊道'
+        },
+        {
+          src: 'https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2',
+          title: '德克士',
+          location: 'A1-015 A1馆前廊道'
+        },
+        {
+          src: 'https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2',
+          title: '德克士',
+          location: 'A1-015 A1馆前廊道'
+        },
+        {
+          src: 'https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2',
+          title: '德克士',
+          location: 'A1-015 A1馆前廊道'
+        },
+        {
+          src: 'https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2',
+          title: '德克士',
+          location: 'A1-015 A1馆前廊道'
         }
+      ],
+      title: '餐饮预订',
+      router: '/'
     }
+  }
+}
 </script>
 
 <style scoped>
-    .food{
-        width:720px;
-        height:100%;
-        align-items:center;
-    }
-    .content{
-        flex:1;
-        border-top:22px solid #EEEEEE;
-        min-height:100vh
-    }
+.content{
+    border-top:22px solid #EEEEEE;
+}
 </style>

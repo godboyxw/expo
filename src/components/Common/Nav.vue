@@ -5,37 +5,37 @@
 </template>
 
 <script>
-    export default {
-        props:{
-            nav:{
-                type : Array,
-            }
-        },
-        data() {
-            return {
-                key : 0
-            }
-        },
-        methods: {
-             jump(index){
-               this.key = index;
-            }
-        },
+export default {
+  props: {
+    nav: {
+      type: Array
     }
+  },
+  data () {
+    return {
+      key: 0
+    }
+  },
+  methods: {
+    jump (index) {
+      this.key = index
+    }
+  }
+}
 </script>
 
 <style scoped>
-    .nav{
-        flex-direction:row;
-        justify-content:space-around;
-        align-items:center;
-        width:720px;
-        height:90px;
-        margin:0 auto;
-        background:rgba(255,255,255,1);
-    }
-    .active{
-        color:rgba(8,117,209,1);
-        border-bottom:4px solid rgba(8,117,209,1);
-    }
+.nav{
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    width:720px;
+    height:90px;
+    margin:0 auto;
+    background:rgba(255,255,255,1);
+}
+.active{
+    color:rgba(8,117,209,1);
+    border-bottom:4px solid rgba(8,117,209,1);
+}
 </style>

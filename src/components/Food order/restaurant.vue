@@ -10,66 +10,66 @@
 </template>
 
 <script>
-    export default {
-        props:{
-            restaurant:{
-                type:Object,
-                default:() => {
-                    return {
-                        src:"https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2",
-                        title:'德克士',
-                        location:'A1-015 A1馆前廊道',
-                    }
-                }
-            }
-        },
-        methods: {
-            next(){
-                this.$router.push('/dish')
-            }
-        },
+export default {
+  props: {
+    restaurant: {
+      type: Object,
+      default: () => {
+        return {
+          src: 'https://ss0.baidu.com/73t1bjeh1BF3odCf/it/u=242644262,3967460579&fm=85&s=C7220CE21E35119A4B99253A0300F0D2',
+          title: '德克士',
+          location: 'A1-015 A1馆前廊道'
+        }
+      }
     }
+  },
+  methods: {
+    next () {
+      this.$router.push('/dish')
+    }
+  }
+}
 </script>
 
 <style scoped>
-    .restaurant{
-        width:656px;
-        height:180px;
-        margin:0 auto;
-        padding:20px 0;
-        border-bottom:1px solid #E7E7E7;
-        flex-direction:row;
-        background:rgba(255,255,255,1);
-        border-radius:10px 10px 0px 0px;
-    }
-    .image{
-        width:200px;
-        height:140px;
-        border-radius:10px;
-    }
-    .desc{
-        padding-top:9px;
-        padding-left:39px;
-        flex:1;
-    }
-    .title{
-        height:30px;
-        margin-bottom:63px;
-        font-size:32px;
-        font-family:SourceHanSansCN-Medium;
-        font-weight:500;
-        color:rgba(53,53,53,1);
-        line-height:30px;
-    }
-    .location{
-        height:24px;
-        font-size:24px;
-        font-family:SourceHanSansCN-Light;
-        font-weight:300;
-        color:rgba(153,153,153,1);
-        line-height:24px;
-    }
-    .icon-map{
-        align-self:center;
-    }
+.restaurant{
+    width:656px;
+    height:180px;
+    margin:0 auto;
+    padding:20px 0;
+    border-bottom:1px solid #E7E7E7;
+    flex-direction:row;
+    background:rgba(255,255,255,1);
+    border-radius:10px 10px 0px 0px;
+}
+.image{
+    width:200px;
+    height:140px;
+    border-radius:10px;
+}
+.desc{
+    padding-top:9px;
+    padding-left:39px;
+    flex:1;
+}
+.title{
+    height:30px;
+    margin-bottom:63px;
+    font-size:32px;
+    font-family:SourceHanSansCN-Medium;
+    font-weight:500;
+    color:rgba(53,53,53,1);
+    line-height:30px;
+}
+.location{
+    height:24px;
+    font-size:24px;
+    font-family:SourceHanSansCN-Light;
+    font-weight:300;
+    color:rgba(153,153,153,1);
+    line-height:24px;
+}
+.icon-map{
+    align-self:center;
+}
 </style>
