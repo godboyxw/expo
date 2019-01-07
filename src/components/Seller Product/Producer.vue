@@ -5,8 +5,8 @@
             <div class="icon-box">
                 <text class="icon icon-back" :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}" @click="back">{{"\ue618"}}</text>
                 <div class="icon-wrap">
-                    <text class="icon icon-star" :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}" @click="star">{{"\ue61d"}}</text>
-                    <text class="icon icon-share" :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}" @click="share">{{"\ue61e"}}</text>
+                    <text class="icon icon-star" :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}">{{"\ue61d"}}</text>
+                    <text class="icon icon-share" :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}">{{"\ue61e"}}</text>
                 </div>
             </div>
         </div>

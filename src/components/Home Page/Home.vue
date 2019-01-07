@@ -56,7 +56,7 @@
         margin:0 auto;
         position:absolute;
         left:24px;
-        top:-250px;
+        top:-30 0px;
         z-index:100;
     }
     .tab{

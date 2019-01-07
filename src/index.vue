@@ -15,12 +15,12 @@ export default {
    created:function () {
             var domModule=weex.requireModule("dom");
             domModule.addRule('fontFace',{
-                'fontFamily':'iconfont',
-                'src':"url('//at.alicdn.com/t/font_952444_9tzyw3fgewu.ttf')"
+              'fontFamily':'iconfont',
+              'src':"url('//at.alicdn.com/t/font_952444_9tzyw3fgewu.ttf')"
             }),
             domModule.addRule('fontFace',{
-                'fontFamily':'SourceHanSansCN-Medium',
-                'src':"url('src/assets/fonts/SourceHanSansCN-Medium.ttf')"
+              'fontFamily':'SourceHanSansCN-Medium',
+              'src':"url('src/assets/fonts/SourceHanSansCN-Medium.ttf')"
             })
            // console.log(this.$getConfig())
            console.log(weex.config)

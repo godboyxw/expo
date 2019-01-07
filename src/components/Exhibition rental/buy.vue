@@ -84,7 +84,6 @@
         right:0;
         bottom:0;
         z-index:100;
-        
     }
     .header{
         height:257px;

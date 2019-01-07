@@ -30,6 +30,7 @@
         },
         methods:{
             next(){
+                //子组件向父组件传值
                 EventBus.$emit('to')
             }
         }
@@ -72,9 +73,11 @@
     }
     .price-wrapper{
         flex-direction:row;
+        align-items:center;
     }
     .dollar{
         font-size:24px;
+        line-height:28px;
         font-family:SourceHanSansCN-Medium;
         font-weight:500;
         color:rgba(251,80,83,1);
