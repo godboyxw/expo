@@ -4,7 +4,7 @@
                :router='router'></headerTop>
     <div class="avatar">
       <image style="width:750px;height:360px;"
-             src="https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1785607224.jpg" />
+             src="https://ss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/tam-ogel/49ea32382977af41ecefc8959b117118_255_96.jpg" />
     </div>
     <div class="nav">
       <text class="text-nav"
@@ -14,8 +14,11 @@
             :class="index === key ? 'active' : ''">{{item}}</text>
     </div>
     <router-view></router-view>
-    <buy v-if="isShow"
-         @click="show,cancel"></buy>
+    <transition name="fade">
+      <buy v-if="isShow"
+           @click="show,cancel">
+      </buy>
+    </transition>
   </div>
 </template>
 
@@ -31,7 +34,7 @@ export default {
   data () {
     return {
       title: '展具租赁',
-      router: '/',
+      router: '/builder',
       nav: ['桌椅', '绿植', '消防', '其他'],
       routers: ['/desk', 'plants', 'fireforce', 'others'],
       key: 0,
@@ -50,11 +53,11 @@ export default {
   created () {
     EventBus.$on('cancel', (a) => {
       this.isShow = a
-      // console.log(this.isShow,a) //false false
+      // console.log(this.isShow, a) // false false
     })
     EventBus.$on('show', (b) => {
       this.isShow = b
-      // console.log(this.isShow,b) //true true
+      // console.log(this.isShow, b) // true true
     })
   }
 }
@@ -63,7 +66,7 @@ export default {
 <style scoped>
 .container {
   width: 750px;
-  min-height:100vh;
+  min-height: 100vh;
 }
 .header {
   width: 750px;
@@ -103,5 +106,13 @@ export default {
 .active {
   color: rgba(8, 117, 209, 1);
   border-bottom: 4px solid rgba(8, 117, 209, 1);
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s ease;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

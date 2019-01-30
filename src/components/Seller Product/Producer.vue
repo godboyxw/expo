@@ -1,41 +1,41 @@
 <template>
   <div class="container">
-  <div class="content">
-    <div class="bgimg">
-      <image style="width:750px;height:360px"
-             resize="stretch"
-             src="https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg" />
-      <div class="icon-box">
-        <text class="icon icon-back"
-              :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}"
-              @click="back">{{"\ue618"}}</text>
-        <div class="icon-wrap">
-          <text class="icon icon-star"
-                :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}">{{"\ue61d"}}</text>
-          <text class="icon icon-share"
-                :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}">{{"\ue61e"}}</text>
+    <div class="content">
+      <div class="bgimg">
+        <image style="width:750px;height:360px"
+               resize="stretch"
+               src="https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg" />
+        <div class="icon-box">
+          <text class="icon icon-back"
+                :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}"
+                @click="back">{{"\ue618"}}</text>
+          <div class="icon-wrap">
+            <text class="icon icon-star"
+                  :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}">{{"\ue61d"}}</text>
+            <text class="icon icon-share"
+                  @click="share"
+                  :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}">{{"\ue61e"}}</text>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="header">
-      <div class="avatar"></div>
-      <div class="info">
-        <text class="text">索尼展商</text>
-        <text class="pub_time">展期：2018/8/15-8/18</text>
+      <div class="header">
+        <div class="avatar"></div>
+        <div class="info">
+          <text class="text">索尼展商</text>
+          <text class="pub_time">展期：2018/8/15-8/18</text>
+        </div>
+        <div class="nav_btn">
+          <text class="font">导航</text>
+        </div>
       </div>
-      <div class="nav_btn">
-        <text class="font">导航</text>
+      <div class="tab">
+        <text v-for="(item,index) in arr"
+              :key="index"
+              @click="jump(index)"
+              :class="key===index? 'active':''"
+              class="txt">{{item}}</text>
       </div>
-    </div>
-    <div class="tab">
-      <text v-for="(item,index) in arr"
-            :key="index"
-            @click="jump(index)"
-            :class="key===index? 'active':''"
-            class="txt">{{item}}</text>
-    </div>
-
-    <router-view></router-view>
+      <router-view></router-view>
     </div>
     <div class="map_menu">
       <text class="business_debate">商业洽谈</text>
@@ -45,6 +45,7 @@
 </template>
 
 <script>
+// import wx from 'weixin-js-sdk'
 // var navigator = weex.requireModule('navigator')
 // const navigator = weex.requireModule("navigator");
 // var modal = weex.requireModule('modal')
@@ -76,10 +77,10 @@ export default {
 <style scoped>
 .container {
   width: 750px;
-  min-height:100vh
+  min-height: 100vh;
 }
-.content{
-  flex:1;
+.content {
+  flex: 1;
 }
 .icon-box {
   width: 750px;

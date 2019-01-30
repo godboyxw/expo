@@ -11,7 +11,7 @@
       <text class="map_desc">展会地图</text>
       <div class="map_img">
         <image style="width:660px;height:270px"
-               src="https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg" />
+               src="https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg" />
       </div>
     </div>
   </div>

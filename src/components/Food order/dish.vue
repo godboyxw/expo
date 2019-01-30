@@ -1,15 +1,20 @@
 <template>
-    <div class="dish">
-        <headerTop :title="title" :router="router"></headerTop>
-        <div class="content">
-            <rice v-for="(item,index) in rice" :key="index" :rice="item" class="riceitem"></rice>
-        </div>
-        <div class="footer">
-            <text class="icon-shopping-cart" :style="{fontFamily:'iconfont',color:'#FF5C5C',fontSize:'97px'}">{{"\ue61c"}}</text>
-            <text class="sum">¥25.0</text>
-            <text class="food-order">订餐</text>
-        </div>
+  <div class="dish">
+    <headerTop :title="title"
+               :router="router"></headerTop>
+    <div class="content">
+      <rice v-for="(item,index) in rice"
+            :key="index"
+            :rice="item"
+            class="riceitem"></rice>
     </div>
+    <div class="footer">
+      <text class="icon-shopping-cart"
+            :style="{fontFamily:'iconfont',color:'#FF5C5C',fontSize:'97px'}">{{"\ue61c"}}</text>
+      <text class="sum">¥25.0</text>
+      <text class="food-order">订餐</text>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -68,51 +73,54 @@ export default {
 </script>
 
 <style scoped>
-.content{
-    padding-top:36px;
-    border-top:6px solid #FAFAFA;
-    align-items:center;
-    flex:1;
-    min-height:calc(100vh - 196px);
-    overflow:auto;
+.dish {
+  width: 750px;
 }
-.riceitem{
-    margin-bottom:28px;
+.content {
+  padding-top: 36px;
+  border-top: 6px solid #fafafa;
+  align-items: center;
+  flex: 1;
+  min-height: calc(100vh - 196px);
+  overflow: auto;
 }
-.footer{
-    flex-direction:row;
-    flex:0;
-    position:relative;
+.riceitem {
+  margin-bottom: 28px;
 }
-.icon-shopping-cart{
-    position:absolute;
-    left:53px;
-    bottom:43px;
-    z-index:100;
+.footer {
+  flex-direction: row;
+  flex: 0;
+  position: relative;
 }
-.sum{
-    width:542px;
-    height:100px;
-    background:rgba(84,65,65,1);
-    /**border:1px solid #544141;**/
-    /**border-right:none;**/
-    font-size:40px;
-    font-family:SourceHanSansCN-Normal;
-    font-weight:400;
-    color:rgba(255,255,255,1);
-    line-height:100px;
-    text-align:center;
+.icon-shopping-cart {
+  position: absolute;
+  left: 53px;
+  bottom: 43px;
+  z-index: 100;
 }
-.food-order{
-    width:176px;
-    height:100px;
-    /**border:1px solid #544141;**/
-    background:rgba(255,92,92,1);
-    font-size:40px;
-    font-family:SourceHanSansCN-Normal;
-    font-weight:400;
-    color:rgba(255,255,255,1);
-    line-height:100px;
-    text-align:center;
+.sum {
+  width: 542px;
+  height: 100px;
+  background: rgba(84, 65, 65, 1);
+  /**border:1px solid #544141;**/
+  /**border-right:none;**/
+  font-size: 40px;
+  font-family: SourceHanSansCN-Normal;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 100px;
+  text-align: center;
+}
+.food-order {
+  width: 176px;
+  height: 100px;
+  /**border:1px solid #544141;**/
+  background: rgba(255, 92, 92, 1);
+  font-size: 40px;
+  font-family: SourceHanSansCN-Normal;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 100px;
+  text-align: center;
 }
 </style>

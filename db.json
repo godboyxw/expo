@@ -1,0 +1,21 @@
+{
+  "posts": [{
+    "id": 1,
+    "title": "json-server",
+    "author": "typicode"
+  }],
+  "comments": [{
+    "id": 1,
+    "body": "some comment",
+    "postId": 1
+  }],
+  "profile": {
+    "name": "typicode"
+  },
+  "homeData": {
+    "arr": ["展会信息", "去买票", "餐饮预定", "媒体资讯", "泊车寻车", "问题反馈", "全景国博", "通勤车查询", "行李托管", "展品运输", "清洁服务"],
+    "txt": "武汉国际博览中心"
+
+
+  }
+}

@@ -4,16 +4,22 @@
           v-for="(item, index) in nav"
           :key="index"
           @click="jump(index)"
-          :class="index === key ? 'active' : ''">{{item}}</text>
+          :style="{color:(index === key ? color : ''),fontWeight:(index === key ? fontWeight : '')}"
+          :class="[index === key ? 'active' : '',{'text-style':isStyle}]">{{item}}</text>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    nav: {
-      type: Array
-    }
+    nav: Array,
+    color: String,
+    fontWeight: Number,
+    isStyle: {
+      type: Boolean,
+      default: true
+    },
+    nextRouter: Array
   },
   data () {
     return {
@@ -23,6 +29,7 @@ export default {
   methods: {
     jump (index) {
       this.key = index
+      this.$router.push(this.nextRouter[index])
     }
   }
 }
@@ -37,6 +44,15 @@ export default {
   height: 90px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 1);
+}
+.text-nav {
+  line-height: 70px;
+}
+.text-style {
+  font-size: 30px;
+  font-family: SourceHanSansCN-Light;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.8);
 }
 .active {
   color: rgba(8, 117, 209, 1);

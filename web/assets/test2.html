@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=qPGK6hIUCFIjlCbRkiB3pGotWwP22WwP"></script>
+  <title>Document</title>
+  <style>
+    #allmap {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      margin: 0;
+      font-family: "微软雅黑";
+    }
+  </style>
+</head>
+
+<body>
+  <div id="allmap"></div>
+</body>
+<script type="text/javascript">
+  // function oadBMapScript() {
+  //   let script = document.createElement('script')
+  //   script.src = 'http://api.map.baidu.com/api?v=2.0&ak=qPGK6hIUCFIjlCbRkiB3pGotWwP22WwP&callback=initialize'
+  //   document.body.appendChild(script)
+  // }
+  // oadBMapScript()
+
+  // function qeuryLocation() {
+  //   var map = new window.BMap.Map('allmap') // 创建Map实例
+  //   map.centerAndZoom(new window.BMap.Point(116.404, 39.915), 11) // 初始化地图,设置中心点坐标和地图级别
+  //   map.setCurrentCity('北京') // 设置地图显示的城市 此项是必须设置的
+  //   map.enableScrollWheelZoom(true) // 开启鼠标滚轮缩放
+
+  //   let map = new window.BMap.Map('allmap') // 创建Map实例
+  //   map.centerAndZoom(new window.BMap.Point(116.404, 39.915), 11) // 初始化地图,设置中心点坐标和地图级别
+  //   添加地图类型控件
+  //   map.addControl(new window.BMap.MapTypeControl({
+  //     mapTypes: [
+  //       BMAP_NORMAL_MAP,
+  //       BMAP_HYBRID_MAP
+  //     ]
+  //   }))
+  //   map.setCurrentCity('北京') // 设置地图显示的城市 此项是必须设置的
+  //   map.enableScrollWheelZoom(true) // 开启鼠标滚轮缩放
+  // }
+  // qeuryLocation()
+  // window.onload = function () {
+  //   oadBMapScript()
+  // }
+
+  var map = new window.BMap.Map('allmap') // 创建Map实例
+  map.centerAndZoom(new window.BMap.Point(116.404, 39.915), 11) // 初始化地图,设置中心点坐标和地图级别
+  // 添加地图类型控件
+  // map.addControl(new window.BMap.MapTypeControl({
+  //   mapTypes: [
+  //     BMAP_NORMAL_MAP,
+  //     BMAP_HYBRID_MAP
+  //   ]
+  // }))
+  map.setCurrentCity('北京') // 设置地图显示的城市 此项是必须设置的
+  map.enableScrollWheelZoom(true) // 开启鼠标滚轮缩放
+</script>
+
+</html>

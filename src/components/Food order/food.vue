@@ -1,10 +1,13 @@
 <template>
-    <div class="food">
-        <headerTop :title="title" :router="router"></headerTop>
-        <div class="content">
-            <restaurant v-for="(item,index) in restaurant" :key="index" :restaurant="item" ></restaurant>
-        </div>
+  <div class="food">
+    <headerTop :title="title"
+               :router="router"></headerTop>
+    <div class="content">
+      <restaurant v-for="(item,index) in restaurant"
+                  :key="index"
+                  :restaurant="item"></restaurant>
     </div>
+  </div>
 </template>
 
 <script>
@@ -67,7 +70,10 @@ export default {
 </script>
 
 <style scoped>
-.content{
-    border-top:22px solid #EEEEEE;
+.food {
+  width: 750px;
+}
+.content {
+  border-top: 22px solid #eeeeee;
 }
 </style>

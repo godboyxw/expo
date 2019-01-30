@@ -1,14 +1,18 @@
 <template>
   <div class="container-box">
     <div class="content">
-      <headerTop :title="title" :router="router"></headerTop>
+      <headerTop :title="title"
+                 :router="router"></headerTop>
       <div class="content-cart">
-        <cart v-for="(item, index) in arr" :key="index" :obj="item"></cart>
+        <cart v-for="(item, index) in arr"
+              :key="index"
+              :obj="item"></cart>
       </div>
     </div>
     <div class="footer">
       <text class="total">总金额 ¥5965.00</text>
-      <text class="account" @click="jump">结算</text>
+      <text class="account"
+            @click="jump">结算</text>
     </div>
   </div>
 </template>
@@ -64,7 +68,7 @@ export default {
       this.$router.push('/tools')
     },
     jump () {
-      this.$router.push('/order')
+      this.$router.push('/shopping/order')
     }
   }
 }
@@ -79,9 +83,6 @@ export default {
 }
 .content {
   flex: 1;
-}
-.content-cart {
-  /**margin-top:96px;**/
 }
 .footer {
   /** position: fixed;

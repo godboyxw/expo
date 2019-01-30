@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Index</title>
   <meta name="weex-viewport" content="750">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no, email=no">
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=qPGK6hIUCFIjlCbRkiB3pGotWwP22WwP"></script>
+  <script type="text/javascript" src="https://g.alicdn.com/dingding/dingtalk-jsapi/2.3.0/dingtalk.open.js"></script>
+  <script type="text/javascript" src="https://g.alicdn.com/dingding/open-develop/1.6.9/dingtalk.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://g.alicdn.com/ilw/ding/0.9.2/scripts/dingtalk.js"></script>
+  <!-- <script type="text/javascript" src="http://g.alicdn.com/dingding/dingtalk-pc-api/2.3.1/index.js?spm=5176.11156381.0.0.48064c5aYVw7eC&file=index.js"></script> -->
   <style>
-    html, body, #weex {
+    html,
+    body,
+    #weex {
       width: 100%;
       height: 100%;
     }
-    html, body {
+
+    html,
+    body {
       -ms-overflow-style: scrollbar;
       -webkit-tap-highlight-color: transparent;
       padding: 0;
@@ -23,6 +34,7 @@
       overflow-x: hidden;
       -webkit-overflow-scrolling: touch;
     }
+
     body::before {
       content: "1";
       height: 1px;
@@ -32,8 +44,11 @@
     }
   </style>
 </head>
+
 <body>
-  <div id="root"></div>
+  <div id="root">
+  </div>
 </body>
 <%= htmlWebpackPlugin.options.devScripts %>
+
 </html>

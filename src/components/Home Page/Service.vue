@@ -23,7 +23,7 @@ export default {
     return {
       arr: ['展会信息', '会议室预约', '展具租赁', '广告申请', '问题反馈', '缴费中心', '申请展位', '表格填写', '特装搭建', '展品运输', '清洁服务', '清洁服务', '清洁服务', '清洁服务'],
       isShow: false
-      // numSlice:arr.length
+      // numSlice: 14  this.arr.length
     }
   },
   methods: {

@@ -1,86 +1,415 @@
 <template>
-  <div class="home">
-    <div class="header">
-      <text class="text">武汉国际博览中心</text>
+  <div class="page">
+    <div class='content'>
+      <div class='bar'>
+        <text class='bar-txt'>武汉国际博览中心</text>
+      </div>
+      <div class='push'></div>
+      <div class='main'>
+        <input type='text'
+               class='inp-text'
+               placeholder='搜索展位、设施等' />
+        <div class='iconfont icon-search'
+             :style="{fontFamily:'iconfont',color:'rgba(153,153,153,1)',fontSize:'30px',position: 'absolute',left: '92px',top: '-18px'}">{{"\ue615"}}
+        </div>
+        <div class='entrance1'
+             v-if="key!==9">
+          <div v-for='(item, index) in descarr1'
+               :key='index'
+               @click="jumpTo1(index)"
+               class='item1'>
+            <text class="icon"
+                  :style="{fontFamily:'iconfont',color:item.color,fontSize:'50px',marginBottom:'26px'}">{{item.fontName}}</text>
+            <text class='txt1'>{{item.txt}}</text>
+          </div>
+        </div>
+
+        <div class='entrance2'
+             v-if="key===9">
+          <div v-for='(item, index) in descarr2'
+               :key='index'
+               @click="jumpTo2(index)"
+               class='item1'>
+            <text class="icon"
+                  :style="{fontFamily:'iconfont',color:item.color,fontSize:'50px',marginBottom:'26px'}">{{item.fontName}}</text>
+            <text class='txt1'>{{item.txt}}</text>
+          </div>
+        </div>
+
+        <div class='role'>
+          <div v-for='(item, index) in rolearr'
+               :key='index'
+               @click="roleTo(index)"
+               class='item2'>
+            <text class='txt2'>{{item.txt}}</text>
+            <text class="icon"
+                  :style="{fontFamily:'iconfont',color:item.color,fontSize:'30px'}">{{item.fontName}}</text>
+          </div>
+        </div>
+      </div>
+      <div class='ads'>
+        <slider class="slider"
+                style="width: 672px;height: 160px;"
+                interval="2000"
+                auto-play="true">
+          <div class="frame"
+               style="width: 672px;height: 160px;"
+               v-for="(img,index) in imageList"
+               :key="index">
+            <image class="image"
+                   style="width: 672px;height: 160px;"
+                   resize="stretch"
+                   :src="img"></image>
+          </div>
+        </slider>
+        <text class="slider-icon"
+              :style="{fontFamily:'iconfont',fontSize:'30px',color:'#ffffff'}">{{'\ue648'}}</text>
+        <!-- <image style='width:100%;height:100%'
+               src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2045970870,2749198357&fm=27&gp=0.jpg'>
+        </image> -->
+      </div>
+      <div class='ads'>
+        <slider class="slider"
+                style="width: 672px;height: 160px;"
+                interval="2000"
+                auto-play="true">
+          <div class="frame"
+               style="width: 672px;height: 160px;"
+               v-for="(img,index) in imageList"
+               :key="index">
+            <image class="image"
+                   style="width: 672px;height: 160px;"
+                   resize="stretch"
+                   :src="img"></image>
+          </div>
+        </slider>
+        <text class="slider-icon"
+              :style="{fontFamily:'iconfont',fontSize:'30px',color:'#ffffff'}">{{'\ue648'}}</text>
+      </div>
+      <div class='ads'>
+        <image style='width:100%;height:100%'
+               src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=138495137,3040106282&fm=26&gp=0.jpg'>
+        </image>
+      </div>
     </div>
-    <Mortal class="mortal"
-            :arr="arr"
-            :isShow="isShow"
-            :numSlice="numSlice"
-            :router="router"></Mortal>
-    <div class="tab">
-      <router-link to="/"><text class="txt active">举办方</text></router-link>
-      <router-link to="/display"><text class="txt">参展商</text></router-link>
-      <router-link to="/service"><text class="txt">服务商</text></router-link>
+    <div class='footer'>
+      <div class='home'>
+        <div class='iconfont icon-home1'
+             :style="{fontFamily:'iconfont',color:'rgba(34,169,255,0.8)',fontSize:'40px'}">
+          {{"\ue62d"}}</div>
+        <text class="home-txt">首页</text>
+      </div>
+      <div class='mine'>
+        <text class='iconfont icon-user'
+              :style="{fontFamily:'iconfont',color:'#000',fontSize:'40px'}">{{"\ue62c"}}</text>
+        <text class="mine-txt">我的</text>
+      </div>
     </div>
+
   </div>
 </template>
 
 <script>
-import Mortal from '../Common/Mortal.vue'
 export default {
-  components: {
-    Mortal
-  },
   data () {
     return {
-      arr: ['展会信息', '去买票', '餐饮预定', '媒体资讯', '泊车寻车', '问题反馈', '全景国博', '通勤车查询', '行李托管', '展品运输', '清洁服务', '清洁服务', '清洁服务', '清洁服务'],
-      isShow: true,
-      numSlice: 9,
-      router: ['/producer', '/tickets', '/food', '/news', '/tools', '/advice']
+      descarr1: [
+        {
+          'fontName': '\ue658',
+          'txt': '展会信息',
+          color: '#F8A16C'
+        },
+        {
+          'fontName': '\ue657',
+          'txt': '展会门票',
+          color: '#FF4A55'
+        },
+        {
+          'fontName': '\ue654',
+          'txt': '餐饮预订',
+          color: '#AF58FD'
+        },
+        {
+          'fontName': '\ue650',
+          'txt': '展馆导航',
+          color: '#54E7BF'
+        },
+        {
+          'fontName': '\ue656',
+          'txt': '泊车寻车',
+          color: '#5DE3C4'
+        },
+        {
+          'fontName': '\ue655',
+          'txt': '交通查询',
+          color: '#46D2E9'
+        },
+        {
+          'fontName': '\ue651',
+          'txt': '行李托管',
+          color: '#4ABBFD'
+        },
+        {
+          fontName: ' \ue652',
+          'txt': '旅游观光',
+          color: '#FDDF20'
+        },
+        {
+          'fontName': '\ue653',
+          'txt': '问题反馈',
+          color: '#FFBB68'
+        },
+        {
+          fontName: '\ue64f',
+          txt: '更多',
+          color: '#C7763A'
+        }
+      ],
+      descarr2: [
+        {
+          fontName: '\ue65a',
+          txt: '媒体资讯',
+          color: '#ff6666'
+        },
+        {
+          fontName: '\ue659',
+          txt: '返回',
+          color: '#339999'
+        }
+      ],
+      rolearr: [
+        {
+          'fontName': '\ue65c',
+          'txt': '主办方',
+          'color': '#FFFFFF'
+        },
+        {
+          'fontName': '\ue65d',
+          'txt': '主场',
+          'color': '#FFFFFF'
+        },
+        {
+          'fontName': '\ue65b',
+          'txt': '参展商',
+          'color': '#FFFFFF'
+        },
+        {
+          'fontName': '\ue65e',
+          'txt': '搭建商',
+          'color': '#FFFFFF'
+        }
+      ],
+      router1: ['/host', '/servicer', '/exhibitor', '/builder'],
+      router2: ['/producer', '/tickets', '/food', '', '', '/transport', '', '/sightseeing', '/advice', ''],
+      router3: ['/news', ''],
+      key: '',
+      imageList: [
+        'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2045970870,2749198357&fm=27&gp=0.jpg',
+        'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=138495137,3040106282&fm=26&gp=0.jpg',
+        'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1743319124.jpg'
+      ]
+    }
+  },
+  methods: {
+    roleTo (index) {
+      this.$router.push(this.router1[index])
+    },
+    jumpTo1 (index) {
+      this.$router.push(this.router2[index])
+      this.key = index
+    },
+    jumpTo2 (index) {
+      this.$router.push(this.router3[index])
+      this.key = !9
     }
   }
 }
 </script>
 
 <style scoped>
-.home {
-  width: 750px;
+.page {
+  background: #f6f6f6;
+  /**justify-content: flex-start;**/
   min-height: 100vh;
-  margin: 0 auto;
-  position: relative;
 }
-.header {
-  width: 750px;
-  height: 500px;
-  background: linear-gradient(
-    0deg,
-    rgba(76, 187, 250, 1) 0%,
-    rgba(127, 132, 255, 1) 78%
-  );
+.content {
+  flex: 1;
+  justify-content: center;
 }
-.text {
+.bar {
   width: 750px;
-  line-height: 40px;
+  height: 230px;
+  /**position: fixed;
+  top:0;**/
+  padding: 72px 0 122px 32px;
+  background: url("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1617998598,4013622293&fm=27&gp=0.jpg");
+}
+.bar-txt {
   font-size: 36px;
   font-family: MicrosoftYaHei;
   font-weight: 400;
-  color: #ffffff;
-  padding-left: 24px;
-  padding-top: 72px;
+  line-height: 40px;
+  color: rgba(255, 255, 255, 1);
 }
-.mortal {
-  margin: 0 auto;
+/**.push{
+  height:182px;
+}**/
+.inp-text {
+  width: 656px;
+  height: 84px;
   position: absolute;
-  left: 39px;
-  top: 400px;
-  z-index: 100;
+  left: 47px;
+  top: -42px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.27);
+  border-radius: 84px;
+  align-self: center;
+  font-size: 24px;
+  font-family: SourceHanSansCN-Light;
+  font-weight: 300;
+  color: rgba(153, 153, 153, 1);
+  padding-left: 110px;
+  outline: none;
 }
-.tab {
+.icon-search {
+  position: absolute;
+  left: 50px;
+  top: 26px;
+}
+.main {
   width: 750px;
+  /**height: 688px;**/
+  /**min-height: 688px;**/
+  position: relative;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.27);
+  border-radius: 0 0 20px 20px;
+  padding: 53px 32px 0 32px;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+}
+.entrance1 {
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.entrance2 {
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.item1 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 164px;
+}
+.img1 {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 28px;
+}
+.txt1 {
+  font-size: 24px;
+  font-family: SourceHanSansCN-Light;
+  font-weight: 300;
+  color: rgba(51, 51, 51, 1);
+  line-height: 40px;
+}
+.role {
+  flex-direction: row;
+  width: 100%;
+  padding: 23px 32px 51px 32px;
+  justify-content: space-between;
+}
+.item2 {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 60px;
+  border-radius: 10px;
+}
+.item2:nth-child(1) {
+  background: linear-gradient(
+    -58deg,
+    rgba(34, 169, 255, 0.8),
+    rgba(23, 105, 253, 0.8)
+  );
+}
+.item2:nth-child(2) {
+  background: linear-gradient(
+    -58deg,
+    rgba(255, 231, 52, 1),
+    rgba(251, 211, 3, 1)
+  );
+  border-radius: 10px;
+}
+.item2:nth-child(3) {
+  background: linear-gradient(
+    -58deg,
+    rgba(252, 151, 126, 0.8),
+    rgba(250, 98, 42, 0.8)
+  );
+}
+.item2:nth-child(4) {
+  background: linear-gradient(
+    -58deg,
+    rgba(0, 226, 238, 0.8),
+    rgba(53, 205, 248, 0.8)
+  );
+}
+.txt2 {
+  font-size: 24px;
+  margin-right: 9px;
+  font-family: SourceHanSansCN-Medium;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+.img2 {
+  width: 37px;
+  height: 40px;
+}
+.ads {
+  width: 672px;
+  height: 160px;
+  position: relative;
+  margin-bottom: 31px;
+  border-radius: 20px;
+  overflow: hidden;
+  align-self: center;
+}
+.slider-icon {
+  position: absolute;
+  right: 20px;
+  top: 65px;
+  z-index: 999;
+}
+.footer {
+  flex: 0;
+  width: 100%;
+  height: 100px;
+  /**position: fixed;
+  bottom:0;**/
   flex-direction: row;
   background: rgba(255, 255, 255, 1);
-  position: fixed;
-  bottom: 0;
 }
-.txt {
-  width: 250px;
-  height: 96px;
-  line-height: 96px;
+.home,
+.mine {
   flex: 1;
-  text-align: center;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  color: rgba(53, 53, 53, 1);
 }
-.active {
-  color: red;
+.home-txt {
+  color: rgba(8, 117, 209, 1);
+}
+.mine-txt,
+.home-txt {
+  font-size: 20px;
+  font-family: SourceHanSansCN-Regular;
+  font-weight: 400;
 }
 </style>

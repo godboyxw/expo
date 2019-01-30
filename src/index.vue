@@ -1,6 +1,10 @@
 <template>
   <div class="wrapper">
-    <router-view/>
+    <!-- <transition name="fade"
+                mode="out-in">
+      <router-view />
+    </transition> -->
+    <router-view />
   </div>
 </template>
 
@@ -12,11 +16,11 @@ export default {
       logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png'
     }
   },
-  created () {
+  beforeCreate () {
     var domModule = weex.requireModule('dom')
     domModule.addRule('fontFace', {
       'fontFamily': 'iconfont',
-      'src': "url('//at.alicdn.com/t/font_952444_pd4roirxis.ttf')"
+      'src': "url('//at.alicdn.com/t/font_952444_ykand7dgamd.ttf')"
     })
     domModule.addRule('fontFace', {
       'fontFamily': 'SourceHanSansCN-Medium',
@@ -33,23 +37,71 @@ export default {
 </script>
 
 <style scoped>
-  .wrapper {
-    justify-content: center;
-    align-items: center;
+.wrapper {
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  width: 424px;
+  height: 200px;
+}
+.greeting {
+  text-align: center;
+  margin-top: 70px;
+  font-size: 50px;
+  color: #41b883;
+}
+.message {
+  margin: 30px;
+  font-size: 32px;
+  color: #727272;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.1s ease;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+/*.fade-enter-active {
+  animation: bounce-in 0.3s;
+}
+.fade-leave-active {
+  animation: bounce-out 0.3s;
+}
+@keyframes bounce-in {
+  0% {
+    transform: translate3d(-100%, 0, 0);
   }
-  .logo {
-    width: 424px;
-    height: 200px;
+  25% {
+    transform: translate3d(-75%, 0, 0);
   }
-  .greeting {
-    text-align: center;
-    margin-top: 70px;
-    font-size: 50px;
-    color: #41B883;
+  50% {
+    transform: translate3d(-50%, 0, 0);
   }
-  .message {
-    margin: 30px;
-    font-size: 32px;
-    color: #727272;
+  75% {
+    transform: translate3d(-25%, 0, 0);
   }
+  100% {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+@keyframes bounce-out {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    transform: translate3d(25%, 0, 0);
+  }
+  50% {
+    transform: translate3d(50%, 0, 0);
+  }
+  75% {
+    transform: translate3d(75%, 0, 0);
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}*/
 </style>

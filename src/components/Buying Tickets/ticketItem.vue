@@ -1,8 +1,8 @@
 <template>
-  <div class="ticketItem"
-       @click="next">
+  <div class="ticketItem">
     <image class="image"
-           :src="ticketItem.src" />
+           :src="ticketItem.src"
+           @click="next" />
     <div class="info">
       <text class="desc">{{ticketItem.desc}}</text>
       <text class="date">{{ticketItem.date}}</text>
@@ -59,7 +59,7 @@ export default {
 }
 .desc {
   font-size: 32px;
-  line-height: 30px;
+  line-height: 32px;
   margin-bottom: 34px;
   font-family: SourceHanSansCN-Regular;
   font-weight: 400;
@@ -67,7 +67,7 @@ export default {
 }
 .date {
   font-size: 24px;
-  line-height: 20px;
+  line-height: 24px;
   margin-bottom: 49px;
   font-family: Adobe Heiti Std R;
   font-weight: normal;
@@ -86,7 +86,7 @@ export default {
 }
 .price {
   font-size: 32px;
-  line-height: 28px;
+  line-height: 32px;
   font-family: SourceHanSansCN-Medium;
   font-weight: 500;
   color: rgba(251, 80, 83, 1);

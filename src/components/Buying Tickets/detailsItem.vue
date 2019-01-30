@@ -97,7 +97,7 @@ export default {
 }
 .discount {
   margin-left: 19px;
-  line-height: 23px;
+  line-height: 70px;
   font-size: 24px;
   font-family: SourceHanSansCN-Regular;
   font-weight: 400;

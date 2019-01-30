@@ -19,42 +19,42 @@ export default {
     return {
       arr: [
         {
-          src: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg',
+          src: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg',
           desc: '麒麟叶',
           discount1: '租5送2',
           discount2: '租7送3',
           price: '¥25'
         },
         {
-          src: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg',
+          src: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg',
           desc: '金钻蔓绿绒',
           discount1: '租5送2',
           discount2: '租7送3',
           price: '¥15'
         },
         {
-          src: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg',
+          src: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg',
           desc: '麒麟叶',
           discount1: '租5送2',
           discount2: '租7送3',
           price: '¥25'
         },
         {
-          src: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg',
+          src: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg',
           desc: '麒麟叶',
           discount1: '租5送2',
           discount2: '租7送3',
           price: '¥25'
         },
         {
-          src: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg',
+          src: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg',
           desc: '金钻蔓绿绒',
           discount1: '租5送2',
           discount2: '租7送3',
           price: '¥15'
         },
         {
-          src: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg',
+          src: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg',
           desc: '金钻蔓绿绒',
           discount1: '租5送2',
           discount2: '租7送3',

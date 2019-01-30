@@ -44,27 +44,27 @@ export default {
     return {
       arr: [
         {
-          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg',
+          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg',
           text: '索尼a5100相机（含1...'
         },
         {
-          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg',
+          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg',
           text: '索尼a5100相机（含1...'
         },
         {
-          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg',
+          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg',
           text: '索尼a5100相机（含1...'
         },
         {
-          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg',
+          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg',
           text: '索尼a5100相机（含1...'
         },
         {
-          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg',
+          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg',
           text: '索尼a5100相机（含1...'
         },
         {
-          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1720072895.jpg',
+          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg',
           text: '索尼a5100相机（含1...'
         }
       ],

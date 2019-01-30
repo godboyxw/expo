@@ -1,12 +1,15 @@
 <template>
-    <div class="restaurant">
-        <image class="image" :src="restaurant.src" @click="next"/>
-        <div class="desc">
-            <text class="title">{{restaurant.title}}</text>
-            <text class="location">{{restaurant.location}}</text>
-        </div>
-        <text class="icon-map" :style="{fontFamily:'iconfont',color:'#000000',fontSize:'38px'}">{{"\ue61a"}}</text>
+  <div class="restaurant">
+    <image class="image"
+           :src="restaurant.src"
+           @click="next" />
+    <div class="desc">
+      <text class="title">{{restaurant.title}}</text>
+      <text class="location">{{restaurant.location}}</text>
     </div>
+    <text class="icon-map"
+          :style="{fontFamily:'iconfont',color:'#000000',fontSize:'38px'}">{{"\ue61a"}}</text>
+  </div>
 </template>
 
 <script>
@@ -32,44 +35,42 @@ export default {
 </script>
 
 <style scoped>
-.restaurant{
-    width:656px;
-    height:180px;
-    margin:0 auto;
-    padding:20px 0;
-    border-bottom:1px solid #E7E7E7;
-    flex-direction:row;
-    background:rgba(255,255,255,1);
-    border-radius:10px 10px 0px 0px;
+.restaurant {
+  width: 656px;
+  height: 180px;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-bottom: 1px solid #e7e7e7;
+  flex-direction: row;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px 10px 0px 0px;
 }
-.image{
-    width:200px;
-    height:140px;
-    border-radius:10px;
+.image {
+  width: 200px;
+  height: 140px;
+  border-radius: 10px;
 }
-.desc{
-    padding-top:9px;
-    padding-left:39px;
-    flex:1;
+.desc {
+  padding-top: 9px;
+  padding-left: 39px;
+  flex: 1;
 }
-.title{
-    height:30px;
-    margin-bottom:63px;
-    font-size:32px;
-    font-family:SourceHanSansCN-Medium;
-    font-weight:500;
-    color:rgba(53,53,53,1);
-    line-height:30px;
+.title {
+  margin-bottom: 63px;
+  font-size: 32px;
+  font-family: SourceHanSansCN-Medium;
+  font-weight: 500;
+  color: rgba(53, 53, 53, 1);
+  line-height: 34px;
 }
-.location{
-    height:24px;
-    font-size:24px;
-    font-family:SourceHanSansCN-Light;
-    font-weight:300;
-    color:rgba(153,153,153,1);
-    line-height:24px;
+.location {
+  font-size: 24px;
+  font-family: SourceHanSansCN-Light;
+  font-weight: 300;
+  color: rgba(153, 153, 153, 1);
+  line-height: 26px;
 }
-.icon-map{
-    align-self:center;
+.icon-map {
+  align-self: center;
 }
 </style>
