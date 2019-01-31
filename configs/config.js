@@ -50,16 +50,7 @@ const config = {
     // In our experience, they generally work as expected,
     // just be aware of this issue when enabling this option.
     cssSourceMap: false,
-    proxyTable: {
-      '/api': {
-        target: 'http://localhost:3000',
-        pathRewrite: {
-          '^/api': '/'
-        },
-        changeOrigin: true,
-        secure: false
-      }
-    },
+    proxyTable: {},
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,

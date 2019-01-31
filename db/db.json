@@ -1,0 +1,14 @@
+{
+  "posts": [
+    { "img": "https://vuejs.org/images/logo.png", "text": "进馆路线" },
+    { "img": "https://vuejs.org/images/logo.png", "text": "办展须知" },
+    { "img": "https://vuejs.org/images/logo.png", "text": "财务管理" },
+    { "img": "https://vuejs.org/images/logo.png", "text": "展位确认书" },
+    { "img": "https://vuejs.org/images/logo.png", "text": "信息管理" },
+    { "img": "https://vuejs.org/images/logo.png", "text": "车辆认证" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}

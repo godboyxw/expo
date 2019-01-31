@@ -124,8 +124,8 @@ export default {
 <style scoped>
 .container {
   width: 750px;
+  box-sizing: border-box;
   background: rgba(0, 0, 0, 0.8);
-  margin: 0 auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -135,7 +135,6 @@ export default {
 .wrapper {
   width: 750px;
   height: 954px;
-  margin: 0 auto;
   opacity: 1;
   background: #ffffff;
   background: rgba(255, 255, 255, 1);
@@ -145,9 +144,12 @@ export default {
   right: 0;
   bottom: 0;
   z-index: 100;
+  align-items: center;
 }
 .header {
+  width: 750px;
   height: 257px;
+  align-self: center;
   flex-direction: row;
   padding-left: 25px;
   padding-right: 24px;
@@ -163,10 +165,8 @@ export default {
 }
 .info {
   flex: 1;
+  align-self: center;
   margin-left: 51px;
-}
-.content {
-  height: 697px;
 }
 .price {
   flex-direction: row;
@@ -199,6 +199,7 @@ export default {
   margin-top: 40px;
 }
 .content-height {
+  width: 750px;
   height: 207px;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(238, 238, 238, 1);
@@ -233,6 +234,7 @@ export default {
   margin: 0 81px;
 }
 .content-count {
+  width: 750px;
   height: 294px;
   border-bottom: 1px solid rgba(238, 238, 238, 1);
   padding-top: 41px;
@@ -279,7 +281,7 @@ export default {
 .txt3 {
   width: 620px;
   height: 90px;
-  margin: 0 auto;
+  align-self: center;
   text-align: center;
   line-height: 90px;
   background: rgba(29, 141, 243, 1);

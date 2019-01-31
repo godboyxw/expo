@@ -68,7 +68,7 @@ export default {
   width: 750px;
   min-height: 100vh;
 }
-.header {
+/**.header {
   width: 750px;
   height: 96px;
   padding-left: 32px;
@@ -86,7 +86,7 @@ export default {
   font-weight: 500;
   color: rgba(53, 53, 53, 1);
   line-height: 40px;
-}
+}**/
 .nav {
   flex-direction: row;
   justify-content: space-around;

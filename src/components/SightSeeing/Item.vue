@@ -99,7 +99,7 @@ export default {
   font-family: SourceHanSansCN-Bold;
   font-weight: bold;
   color: rgba(53, 53, 53, 1);
-  line-height: 40px;
+  /**line-height: 40px;**/
 }
 .rating-wrapper {
   flex-direction: row;
