@@ -4,17 +4,23 @@
       <div class="bgimg">
         <image style="width:750px;height:360px"
                resize="stretch"
-               src="https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1750072895.jpg" />
+               src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=138495137,3040106282&fm=26&gp=0.jpg" />
         <div class="icon-box">
-          <text class="icon icon-back"
-                :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}"
-                @click="back">{{"\ue618"}}</text>
+          <div class="icon">
+            <text class="icon-back"
+                  :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'36px'}"
+                  @click="back">{{"\ue618"}}</text>
+          </div>
           <div class="icon-wrap">
-            <text class="icon icon-star"
-                  :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}">{{"\ue61d"}}</text>
-            <text class="icon icon-share"
-                  @click="share"
-                  :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'48px'}">{{"\ue61e"}}</text>
+            <div class="icon">
+              <text class="icon-star"
+                    :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'36px'}">{{"\ue61d"}}</text>
+            </div>
+            <div class="icon">
+              <text class="icon-share"
+                    @click="share"
+                    :style="{fontFamily:'iconfont',color:'#ffffff',fontSize:'36px'}">{{"\ue61e"}}</text>
+            </div>
           </div>
         </div>
       </div>
@@ -96,6 +102,8 @@ export default {
   height: 48px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
+  justify-content: center;
+  align-items: center;
 }
 .icon-wrap {
   width: 138px;

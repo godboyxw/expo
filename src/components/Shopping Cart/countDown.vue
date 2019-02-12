@@ -38,7 +38,7 @@ export default {
     countDown () {
       var date = new Date()
       var now = date.getTime()
-      var str = '2019/2/1 11:02:00'
+      var str = '2019/3/1 11:02:00'
       var endDate = new Date(str)
       this.leftTime = endDate - now
       if (this.leftTime > 0) {

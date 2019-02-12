@@ -40,7 +40,7 @@
              @click="exchange">{{"\ue626"}}
         </div>
         <text class="text"
-              @click="search">搜索</text>
+              @click="search(from,to)">搜索</text>
       </div>
     </div>
     <div class="map">
@@ -143,9 +143,12 @@ export default {
       this.from = this.to
       this.to = this.transfer
     },
-    search () {
-      routeSearch(this.from, this.to)
+    search (x, y) {
+      routeSearch(x, y)
     },
+    // search () {
+    //   routeSearch(this.from, this.to)
+    // }
     focusFrom () {
       // this.$refs['input1'].value = ''
       this.from = ''

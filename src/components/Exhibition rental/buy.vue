@@ -78,7 +78,7 @@ export default {
     next () {
       if (this.key1 === '' || this.key2 === '') {
         modal.toast({
-          message: '请选择高度或者数量!',
+          message: '请选择高度和数量!',
           duration: 2
         })
       } else {

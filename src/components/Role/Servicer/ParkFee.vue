@@ -50,7 +50,6 @@ export default {
   },
   methods: {
     next () {
-      console.log('22')
       this.$router.push('/servicer/park/details')
       // this.$refs.card1.nextTo()
     }

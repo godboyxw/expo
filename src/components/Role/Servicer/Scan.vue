@@ -6,8 +6,9 @@
           :style="{fontFamily:'iconfont',color:'#313131',fontSize:'35px',position:'fixed',right:'10px',top:'35px',zIndex:'999'}">{{"\ue663"}}</text>
     <div class="content">
       <div class="main">
-        <image src="src/assets/images/8.png"
-               style="width:440px;height:440px;align-self:center;margin-bottom: 52px;" />
+        <!-- <image src="src/assets/images/8.png"
+               style="width:440px;height:440px;align-self:center;margin-bottom: 52px;" /> -->
+        <qrcode class="qrcode"></qrcode>
         <text class="instruction">停车场出口扫描此二维码即可开闸</text>
         <text class="reserve-time">预留时间：40min</text>
       </div>
@@ -27,9 +28,11 @@
 
 <script>
 import headerTop from '../../Common/headerTop'
+import Qrcode from './Qrcode'
 export default {
   components: {
-    headerTop
+    headerTop,
+    Qrcode
   },
   data () {
     return {
@@ -55,6 +58,10 @@ export default {
   padding-top: 102px;
   background: rgba(30, 127, 209, 1);
   border-radius: 40px 40px 0px 0px;
+}
+.qrcode {
+  align-self: center;
+  margin-bottom: 52px;
 }
 .instruction {
   margin-bottom: 38px;

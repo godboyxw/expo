@@ -54,19 +54,42 @@
                 auto-play="true">
           <div class="frame"
                style="width: 672px;height: 160px;"
-               v-for="(img,index) in imageList"
+               v-for="(item,index) in imageList1"
                :key="index">
+            <text class="ads-desc1">{{item.desc1}}</text>
+            <text class="ads-desc2">{{item.desc2}}</text>
             <image class="image"
                    style="width: 672px;height: 160px;"
                    resize="stretch"
-                   :src="img"></image>
+                   :src="item.img"></image>
           </div>
         </slider>
         <text class="slider-icon"
               :style="{fontFamily:'iconfont',fontSize:'30px',color:'#ffffff'}">{{'\ue648'}}</text>
-        <!-- <image style='width:100%;height:100%'
-               src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2045970870,2749198357&fm=27&gp=0.jpg'>
-        </image> -->
+        <div class="ads-btn-wrapper">
+          <text class="ads-btn">广告</text>
+        </div>
+      </div>
+      <div class='ads'>
+        <slider class="
+                slider"
+                style="width: 672px;height: 160px;"
+                interval="2000"
+                auto-play="true">
+          <div class="frame"
+               style="width: 672px;height: 160px;"
+               v-for="(item,index) in imageList2"
+               :key="index">
+            <text class="ads-desc3">{{item.desc1}}</text>
+            <text class="ads-desc4">{{item.desc2}}</text>
+            <image class="image"
+                   style="width: 672px;height: 160px;"
+                   resize="stretch"
+                   :src="item.img"></image>
+          </div>
+        </slider>
+        <text class="slider-icon"
+              :style="{fontFamily:'iconfont',fontSize:'30px',color:'#ffffff'}">{{'\ue648'}}</text>
       </div>
       <div class='ads'>
         <slider class="slider"
@@ -75,21 +98,18 @@
                 auto-play="true">
           <div class="frame"
                style="width: 672px;height: 160px;"
-               v-for="(img,index) in imageList"
+               v-for="(item,index) in imageList3"
                :key="index">
+            <text class="ads-desc5">{{item.desc1}}</text>
+            <text class="ads-desc6">{{item.desc2}}</text>
             <image class="image"
                    style="width: 672px;height: 160px;"
                    resize="stretch"
-                   :src="img"></image>
+                   :src="item.img"></image>
           </div>
         </slider>
         <text class="slider-icon"
               :style="{fontFamily:'iconfont',fontSize:'30px',color:'#ffffff'}">{{'\ue648'}}</text>
-      </div>
-      <div class='ads'>
-        <image style='width:100%;height:100%'
-               src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=138495137,3040106282&fm=26&gp=0.jpg'>
-        </image>
       </div>
     </div>
     <div class='footer'>
@@ -203,10 +223,56 @@ export default {
       router2: ['/producer', '/tickets', '/food', '', '', '/transport', '', '/sightseeing', '/advice', ''],
       router3: ['/news', ''],
       key: '',
-      imageList: [
-        'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2045970870,2749198357&fm=27&gp=0.jpg',
-        'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=138495137,3040106282&fm=26&gp=0.jpg',
-        'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1743319124.jpg'
+      imageList1: [
+        {
+          img: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2045970870,2749198357&fm=27&gp=0.jpg',
+          desc1: '#新梅塞德斯#',
+          desc2: '奔驰长轴距GL敢为英雄 '
+        },
+        {
+          img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=138495137,3040106282&fm=26&gp=0.jpg',
+          desc1: '#新梅塞德斯#',
+          desc2: '奔驰长轴距GL敢为英雄 '
+        },
+        {
+          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1743319124.jpg',
+          desc1: '#新梅塞德斯#',
+          desc2: '奔驰长轴距GL敢为英雄 '
+        }
+      ],
+      imageList2: [
+        {
+          img: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2045970870,2749198357&fm=27&gp=0.jpg',
+          desc1: '#全新奥迪A7#',
+          desc2: '前瞻美学 锐意尽展  '
+        },
+        {
+          img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=138495137,3040106282&fm=26&gp=0.jpg',
+          desc1: '#全新奥迪A7#',
+          desc2: '前瞻美学 锐意尽展  '
+        },
+        {
+          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1743319124.jpg',
+          desc1: '#全新奥迪A7#',
+          desc2: '前瞻美学 锐意尽展  '
+        }
+      ],
+      imageList3: [
+        {
+          img: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2045970870,2749198357&fm=27&gp=0.jpg',
+          desc1: '#全新奥迪RS 3#',
+          desc2: '用速度对美重新定义  '
+        },
+        {
+          img: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=138495137,3040106282&fm=26&gp=0.jpg',
+          desc1: '#全新奥迪RS 3#',
+          desc2: '用速度对美重新定义  '
+        },
+        {
+          img: 'https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1743319124.jpg',
+          desc1: '#全新奥迪RS 3#',
+          desc2: '用速度对美重新定义  '
+        }
       ]
     }
   },
@@ -380,11 +446,89 @@ export default {
   overflow: hidden;
   align-self: center;
 }
+.ads-desc1 {
+  position: absolute;
+  left: 39px;
+  top: 47px;
+  z-index: 999;
+  font-size: 22px;
+  font-family: SourceHanSansCN-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+.ads-desc2 {
+  position: absolute;
+  left: 16px;
+  top: 84px;
+  z-index: 999;
+  font-size: 30px;
+  font-family: SourceHanSansCN-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+.ads-desc3 {
+  position: absolute;
+  left: 44px;
+  top: 18px;
+  z-index: 999;
+  font-size: 22px;
+  font-family: SourceHanSansCN-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+.ads-desc4 {
+  position: absolute;
+  left: 22px;
+  top: 55px;
+  z-index: 999;
+  font-size: 30px;
+  font-family: SourceHanSansCN-Medium;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+.ads-desc5 {
+  position: absolute;
+  left: 44px;
+  top: 44px;
+  z-index: 999;
+  font-size: 22px;
+  font-family: SourceHanSansCN-Medium;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+.ads-desc6 {
+  position: absolute;
+  left: 32px;
+  top: 81px;
+  z-index: 999;
+  font-size: 30px;
+  font-family: SourceHanSansCN-Medium;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
 .slider-icon {
   position: absolute;
   right: 20px;
   top: 65px;
   z-index: 999;
+}
+.ads-btn-wrapper {
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  z-index: 999;
+  border-color: rgba(153, 153, 153, 1);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+}
+.ads-btn {
+  font-size: 18px;
+  font-family: SourceHanSansCN-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
 }
 .footer {
   flex: 0;
