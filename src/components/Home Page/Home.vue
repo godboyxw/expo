@@ -4,14 +4,12 @@
       <div class='bar'>
         <text class='bar-txt'>武汉国际博览中心</text>
       </div>
-      <div class='push'></div>
       <div class='main'>
         <input type='text'
                class='inp-text'
                placeholder='搜索展位、设施等' />
-        <div class='iconfont icon-search'
-             :style="{fontFamily:'iconfont',color:'rgba(153,153,153,1)',fontSize:'30px',position: 'absolute',left: '92px',top: '-18px'}">{{"\ue615"}}
-        </div>
+        <text class='iconfont icon-search'
+              :style="{fontFamily:'iconfont',color:'rgba(153,153,153,1)',fontSize:'30px',position: 'absolute',left: '92px',top: '-18px'}">{{"\ue615"}}</text>
         <div class='entrance1'
              v-if="key!==9">
           <div v-for='(item, index) in descarr1'
@@ -23,7 +21,6 @@
             <text class='txt1'>{{item.txt}}</text>
           </div>
         </div>
-
         <div class='entrance2'
              v-if="key===9">
           <div v-for='(item, index) in descarr2'
@@ -40,6 +37,7 @@
           <div v-for='(item, index) in rolearr'
                :key='index'
                @click="roleTo(index)"
+               :style="{backgroundImage:item.backgroundImage}"
                class='item2'>
             <text class='txt2'>{{item.txt}}</text>
             <text class="icon"
@@ -201,22 +199,26 @@ export default {
         {
           'fontName': '\ue65c',
           'txt': '主办方',
-          'color': '#FFFFFF'
+          'color': '#FFFFFF',
+          'backgroundImage': 'linear-gradient(-58deg,rgba(34, 169, 255, 0.8),rgba(23, 105, 253, 0.8))'
         },
         {
           'fontName': '\ue65d',
           'txt': '主场',
-          'color': '#FFFFFF'
+          'color': '#FFFFFF',
+          'backgroundImage': 'linear-gradient(-58deg,rgba(255, 231, 52, 1),rgba(251, 211, 3, 1))'
         },
         {
           'fontName': '\ue65b',
           'txt': '参展商',
-          'color': '#FFFFFF'
+          'color': '#FFFFFF',
+          'backgroundImage': 'linear-gradient(-58deg,rgba(252, 151, 126, 0.8),rgba(250, 98, 42, 0.8))'
         },
         {
           'fontName': '\ue65e',
           'txt': '搭建商',
-          'color': '#FFFFFF'
+          'color': '#FFFFFF',
+          'backgroundImage': 'linear-gradient(-58deg,rgba(0, 226, 238, 0.8),rgba(53, 205, 248, 0.8))'
         }
       ],
       router1: ['/host', '/servicer', '/exhibitor', '/builder'],
@@ -294,8 +296,7 @@ export default {
 
 <style scoped>
 .page {
-  background: #f6f6f6;
-  /**justify-content: flex-start;**/
+  background-color: #f6f6f6;
   min-height: 100vh;
 }
 .content {
@@ -305,10 +306,10 @@ export default {
 .bar {
   width: 750px;
   height: 230px;
-  /**position: fixed;
-  top:0;**/
-  padding: 72px 0 122px 32px;
-  background: url("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1617998598,4013622293&fm=27&gp=0.jpg");
+  padding-top: 72px;
+  padding-left: 32px;
+  background-image: url("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1617998598,4013622293&fm=27&gp=0.jpg");
+  background-size: cover;
 }
 .bar-txt {
   font-size: 36px;
@@ -317,16 +318,26 @@ export default {
   line-height: 40px;
   color: rgba(255, 255, 255, 1);
 }
-/**.push{
-  height:182px;
-}**/
+.main {
+  width: 750px;
+  position: relative;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.27);
+  border-radius: 0 0 20px 20px;
+  padding-top: 53px;
+  padding-right: 32px;
+  padding-bottom: 0px;
+  padding-left: 32px;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+}
 .inp-text {
   width: 656px;
   height: 84px;
   position: absolute;
   left: 47px;
   top: -42px;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.27);
   border-radius: 84px;
   align-self: center;
@@ -342,33 +353,21 @@ export default {
   left: 50px;
   top: 26px;
 }
-.main {
-  width: 750px;
-  /**height: 688px;**/
-  /**min-height: 688px;**/
-  position: relative;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.27);
-  border-radius: 0 0 20px 20px;
-  padding: 53px 32px 0 32px;
-  box-sizing: border-box;
-  margin-bottom: 35px;
-}
 .entrance1 {
+  width: 750px;
   flex-direction: row;
-  width: 100%;
   flex-wrap: wrap;
 }
 .entrance2 {
+  width: 750px;
   flex-direction: row;
-  width: 100%;
   flex-wrap: wrap;
 }
 .item1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25%;
+  width: 171.5px;
   height: 164px;
 }
 .img1 {
@@ -385,8 +384,11 @@ export default {
 }
 .role {
   flex-direction: row;
-  width: 100%;
-  padding: 23px 32px 51px 32px;
+  width: 686px;
+  padding-top: 21px;
+  padding-right: 23px;
+  padding-bottom: 51px;
+  padding-left: 23px;
   justify-content: space-between;
 }
 .item2 {
@@ -396,35 +398,6 @@ export default {
   width: 140px;
   height: 60px;
   border-radius: 10px;
-}
-.item2:nth-child(1) {
-  background: linear-gradient(
-    -58deg,
-    rgba(34, 169, 255, 0.8),
-    rgba(23, 105, 253, 0.8)
-  );
-}
-.item2:nth-child(2) {
-  background: linear-gradient(
-    -58deg,
-    rgba(255, 231, 52, 1),
-    rgba(251, 211, 3, 1)
-  );
-  border-radius: 10px;
-}
-.item2:nth-child(3) {
-  background: linear-gradient(
-    -58deg,
-    rgba(252, 151, 126, 0.8),
-    rgba(250, 98, 42, 0.8)
-  );
-}
-.item2:nth-child(4) {
-  background: linear-gradient(
-    -58deg,
-    rgba(0, 226, 238, 0.8),
-    rgba(53, 205, 248, 0.8)
-  );
 }
 .txt2 {
   font-size: 24px;
@@ -510,7 +483,6 @@ export default {
   position: absolute;
   right: 20px;
   top: 65px;
-  z-index: 999;
 }
 .ads-btn-wrapper {
   width: auto;
@@ -518,7 +490,6 @@ export default {
   position: absolute;
   left: 9px;
   top: 9px;
-  z-index: 999;
   border-color: rgba(153, 153, 153, 1);
   border-width: 1px;
   border-style: solid;
@@ -532,12 +503,10 @@ export default {
 }
 .footer {
   flex: 0;
-  width: 100%;
+  width: 750px;
   height: 100px;
-  /**position: fixed;
-  bottom:0;**/
   flex-direction: row;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
 }
 .home,
 .mine {

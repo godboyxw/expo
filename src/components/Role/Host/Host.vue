@@ -7,7 +7,7 @@
                  :paddingTop="paddingTop"
                  :alignItems="alignItems"
                  :pushHeight="pushHeight"
-                 :background="background"
+                 :backgroundImage="backgroundImage"
                  :color="color"
                  :router="router"></headerTop>
     </div>
@@ -47,7 +47,7 @@ export default {
       paddingTop: '75px',
       alignSelf: '',
       alignItems: '',
-      background: 'linear-gradient(to bottom,rgba(69,128,250,1) 0%,rgba(255,255,255,1) 100%)',
+      backgroundImage: 'linear-gradient(to bottom,rgba(69,128,250,1) 0%,rgba(255,255,255,1) 100%)',
       pushHeight: '350px',
       color: 'rgba(255,255,255,1)',
       mainArr: [
@@ -122,13 +122,16 @@ export default {
   letter-spacing: 2.4px;
 }
 .main {
-  padding: 71px 77px 0 79px;
+  width: 750px;
+  padding-top: 52px;
+  padding-right: 67px;
+  padding-left: 67px;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
 }
 .item {
-  width: 33.3333%;
+  width: 205.34px;
   margin-bottom: 50px;
   align-items: center;
 }

@@ -99,11 +99,9 @@ export default {
   z-index: 100;
 }
 .sum {
-  width: 542px;
+  width: 565px;
   height: 100px;
   background: rgba(84, 65, 65, 1);
-  /**border:1px solid #544141;**/
-  /**border-right:none;**/
   font-size: 40px;
   font-family: SourceHanSansCN-Normal;
   font-weight: 400;
@@ -112,9 +110,8 @@ export default {
   text-align: center;
 }
 .food-order {
-  width: 176px;
+  width: 185px;
   height: 100px;
-  /**border:1px solid #544141;**/
   background: rgba(255, 92, 92, 1);
   font-size: 40px;
   font-family: SourceHanSansCN-Normal;

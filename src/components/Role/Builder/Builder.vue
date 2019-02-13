@@ -7,7 +7,7 @@
                  :paddingTop="paddingTop"
                  :alignItems="alignItems"
                  :pushHeight="pushHeight"
-                 :background="background"
+                 :backgroundImage="backgroundImage"
                  :color="color"
                  :router="router"></headerTop>
     </div>
@@ -46,10 +46,10 @@ export default {
       title: '搭建商',
       router: '/',
       height: '350px',
-      paddingTop: '75px',
+      paddingTop: '49px',
       alignSelf: '',
       alignItems: '',
-      background: 'linear-gradient(to bottom,rgba(69,128,250,1) 0%,rgba(255,255,255,1) 100%)',
+      backgroundImage: 'linear-gradient(to bottom,rgba(69,128,250,1) 0%,rgba(255,255,255,1) 100%)',
       pushHeight: '350px',
       color: 'rgba(255,255,255,1)',
       mainArr: [
@@ -106,7 +106,7 @@ export default {
 .know {
   width: 656px;
   height: 160px;
-  background: linear-gradient(
+  background-image: linear-gradient(
     90deg,
     rgba(76, 187, 250, 1) 0%,
     rgba(127, 132, 255, 1) 78%
@@ -137,13 +137,16 @@ export default {
   letter-spacing: 2.4px;
 }
 .main {
-  padding: 71px 77px 0 79px;
+  width: 750px;
+  padding-top: 52px;
+  padding-right: 67px;
+  padding-left: 67px;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
 }
 .item {
-  width: 33.3333%;
+  width: 205.3px;
   margin-bottom: 50px;
   align-items: center;
 }

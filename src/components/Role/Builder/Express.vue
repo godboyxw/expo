@@ -1,5 +1,6 @@
 <template>
-  <div class="express">
+  <div class="express"
+       :style="{'minHeight':minHeight + 'px'}">
     <headerTop :title="title"
                :router="router"></headerTop>
     <div class="main">
@@ -25,6 +26,7 @@ export default {
     return {
       title: '物流服务',
       router: '/builder',
+      minHeight: '1',
       expressArr: [
         {
           src: 'src/assets/images/1.png',
@@ -71,18 +73,30 @@ export default {
         }
       ]
     }
+  },
+  created () {
+    // this.minHeight = (750 * (weex.config.env.deviceHeight) / weex.config.env.deviceWidth / weex.config.env.dpr)
+    this.minHeight = weex.config.env.deviceHeight / weex.config.env.dpr
+    console.log(this.minHeight)
   }
+  // computed: {
+  //   minHeightCount () {
+  //     return this.minHeight + 'px'
+  //   }
+  // }
 }
 </script>
 
 <style scoped>
 .express {
   width: 750px;
-  min-height: 100vh;
+  /**min-height: 100vh;**/
 }
 .main {
   border-top: 1px solid rgba(220, 220, 220, 1);
-  padding: 58px 27px 0 38px;
+  padding-top: 58px;
+  padding-right: 27px;
+  padding-left: 38px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -90,7 +104,7 @@ export default {
 .item {
   width: 300px;
   height: 100px;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
   box-shadow: 0px 5px 7px 1px rgba(134, 157, 235, 0.49);
   border-radius: 50px;
   margin-bottom: 66px;

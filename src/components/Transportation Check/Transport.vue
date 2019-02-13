@@ -3,7 +3,7 @@
     <headerTop :title="title"
                :router="router"
                :color="color"
-               :background="background"
+               :backgroundImage="backgroundImage"
                class="headerTop">
     </headerTop>
     <div class="search">
@@ -107,7 +107,7 @@ export default {
       title: '交通查询',
       router: '/',
       color: 'rgba(255, 255, 255, 1)',
-      background: 'linear-gradient(-58deg,rgba(34,169,255,0.8),rgba(23,105,253,0.8))',
+      backgroundImage: 'linear-gradient(-58deg,rgba(34,169,255,0.8),rgba(23,105,253,0.8))',
       nav: ['地铁', '公交', '机场', '火车站', '通勤车', '自驾车'],
       key: 0,
       metro: [
