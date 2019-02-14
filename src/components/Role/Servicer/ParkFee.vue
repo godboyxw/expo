@@ -3,7 +3,7 @@
     <headerTop :title="title"
                :router="router"></headerTop>
     <text class="icon-point"
-          :style="{fontFamily:'iconfont',color:'#313131',fontSize:'35px',position:'fixed',right:'10px',top:'35px',zIndex:'999'}">{{"\ue663"}}</text>
+          :style="{fontFamily:'iconfont',color:'#313131',fontSize:'30px',position:'fixed',right:'10px',top:'30px',zIndex:'999'}">{{"\ue66c"}}</text>
     <div class="main">
       <text class="txt">正在进行...</text>
       <div class=""
@@ -61,11 +61,11 @@ export default {
 .park {
   width: 750px;
   min-height: 100vh;
-  background: #eeeeee;
+  background-color: #eeeeee;
   align-items: center;
 }
 .main {
-  background: #eeeeee;
+  background-color: #eeeeee;
 }
 .txt {
   height: 85px;

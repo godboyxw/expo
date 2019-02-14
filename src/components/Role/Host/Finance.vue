@@ -102,11 +102,11 @@ export default {
 .finance {
   width: 750px;
   min-height: 100vh;
-  background: #f3f3f3;
+  background-color: #f3f3f3;
 }
 .classify-wrapper {
   height: 75px;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
   flex-direction: row;
   padding-left: 41px;
   align-items: center;
@@ -119,7 +119,7 @@ export default {
   width: 750px;
   height: 463px;
   border-top: 1px solid #cacaca;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
   position: absolute;
   left: 0;
   top: 75px;
@@ -194,7 +194,7 @@ export default {
 .time {
   width: 84px;
   height: 32px;
-  background: rgba(204, 204, 204, 1);
+  background-color: rgba(204, 204, 204, 1);
   border-radius: 6px;
   font-size: 24px;
   text-align: center;

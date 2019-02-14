@@ -2,14 +2,11 @@
   <div class="page">
     <div class='content'>
       <div class='bar'>
+        <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1617998598,4013622293&fm=27&gp=0.jpg"
+               style="width:750px;height:230px"></image>
         <text class='bar-txt'>武汉国际博览中心</text>
       </div>
       <div class='main'>
-        <input type='text'
-               class='inp-text'
-               placeholder='搜索展位、设施等' />
-        <text class='iconfont icon-search'
-              :style="{fontFamily:'iconfont',color:'rgba(153,153,153,1)',fontSize:'30px',position: 'absolute',left: '92px',top: '-18px'}">{{"\ue615"}}</text>
         <div class='entrance1'
              v-if="key!==9">
           <div v-for='(item, index) in descarr1'
@@ -32,7 +29,6 @@
             <text class='txt1'>{{item.txt}}</text>
           </div>
         </div>
-
         <div class='role'>
           <div v-for='(item, index) in rolearr'
                :key='index'
@@ -45,6 +41,11 @@
           </div>
         </div>
       </div>
+      <input type='text'
+             class='inp-text'
+             placeholder='搜索展位、设施等' />
+      <text class='iconfont icon-search'
+            :style="{fontFamily:'iconfont',color:'rgba(153,153,153,1)',fontSize:'30px'}">{{"\ue66d"}}</text>
       <div class='ads'>
         <slider class="slider"
                 style="width: 672px;height: 160px;"
@@ -54,12 +55,12 @@
                style="width: 672px;height: 160px;"
                v-for="(item,index) in imageList1"
                :key="index">
-            <text class="ads-desc1">{{item.desc1}}</text>
-            <text class="ads-desc2">{{item.desc2}}</text>
             <image class="image"
                    style="width: 672px;height: 160px;"
                    resize="stretch"
                    :src="item.img"></image>
+            <text class="ads-desc1">{{item.desc1}}</text>
+            <text class="ads-desc2">{{item.desc2}}</text>
           </div>
         </slider>
         <text class="slider-icon"
@@ -78,12 +79,12 @@
                style="width: 672px;height: 160px;"
                v-for="(item,index) in imageList2"
                :key="index">
-            <text class="ads-desc3">{{item.desc1}}</text>
-            <text class="ads-desc4">{{item.desc2}}</text>
             <image class="image"
                    style="width: 672px;height: 160px;"
                    resize="stretch"
                    :src="item.img"></image>
+            <text class="ads-desc3">{{item.desc1}}</text>
+            <text class="ads-desc4">{{item.desc2}}</text>
           </div>
         </slider>
         <text class="slider-icon"
@@ -98,12 +99,12 @@
                style="width: 672px;height: 160px;"
                v-for="(item,index) in imageList3"
                :key="index">
-            <text class="ads-desc5">{{item.desc1}}</text>
-            <text class="ads-desc6">{{item.desc2}}</text>
             <image class="image"
                    style="width: 672px;height: 160px;"
                    resize="stretch"
                    :src="item.img"></image>
+            <text class="ads-desc5">{{item.desc1}}</text>
+            <text class="ads-desc6">{{item.desc2}}</text>
           </div>
         </slider>
         <text class="slider-icon"
@@ -112,9 +113,8 @@
     </div>
     <div class='footer'>
       <div class='home'>
-        <div class='iconfont icon-home1'
-             :style="{fontFamily:'iconfont',color:'rgba(34,169,255,0.8)',fontSize:'40px'}">
-          {{"\ue62d"}}</div>
+        <text class='iconfont icon-home2'
+              :style="{fontFamily:'iconfont',color:'rgba(34,169,255,0.8)',fontSize:'40px'}">{{"\ue66b"}}</text>
         <text class="home-txt">首页</text>
       </div>
       <div class='mine'>
@@ -123,7 +123,6 @@
         <text class="mine-txt">我的</text>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -306,37 +305,25 @@ export default {
 .bar {
   width: 750px;
   height: 230px;
-  padding-top: 72px;
-  padding-left: 32px;
-  background-image: url("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1617998598,4013622293&fm=27&gp=0.jpg");
-  background-size: cover;
+  position: relative;
 }
 .bar-txt {
+  position: absolute;
+  top: 72px;
+  left: 32px;
   font-size: 36px;
   font-family: MicrosoftYaHei;
   font-weight: 400;
   line-height: 40px;
   color: rgba(255, 255, 255, 1);
 }
-.main {
-  width: 750px;
-  position: relative;
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.27);
-  border-radius: 0 0 20px 20px;
-  padding-top: 53px;
-  padding-right: 32px;
-  padding-bottom: 0px;
-  padding-left: 32px;
-  box-sizing: border-box;
-  margin-bottom: 35px;
-}
 .inp-text {
   width: 656px;
   height: 84px;
   position: absolute;
   left: 47px;
-  top: -42px;
+  top: 188px;
+  z-index: 999;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.27);
   border-radius: 84px;
@@ -350,8 +337,22 @@ export default {
 }
 .icon-search {
   position: absolute;
-  left: 50px;
-  top: 26px;
+  z-index: 999;
+  height: 30px;
+  left: 92px;
+  top: 215px;
+}
+.main {
+  width: 750px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.27);
+  border-radius: 0 0 20px 20px;
+  padding-top: 53px;
+  padding-right: 32px;
+  padding-bottom: 0px;
+  padding-left: 32px;
+  box-sizing: border-box;
+  margin-bottom: 35px;
 }
 .entrance1 {
   width: 750px;

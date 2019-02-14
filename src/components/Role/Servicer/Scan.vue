@@ -3,7 +3,7 @@
     <headerTop :title="title"
                :router="router"></headerTop>
     <text class="icon-point"
-          :style="{fontFamily:'iconfont',color:'#313131',fontSize:'35px',position:'fixed',right:'10px',top:'35px',zIndex:'999'}">{{"\ue663"}}</text>
+          :style="{fontFamily:'iconfont',color:'#313131',fontSize:'30px',position:'fixed',right:'10px',top:'30px',zIndex:'999'}">{{"\ue66c"}}</text>
     <div class="content">
       <div class="main">
         <!-- <image src="src/assets/images/8.png"

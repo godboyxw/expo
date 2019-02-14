@@ -43,7 +43,6 @@ export default {
         {
           src: 'src/assets/images/4.png',
           txt: '货车办证流程'
-
         }
       ],
       style: [

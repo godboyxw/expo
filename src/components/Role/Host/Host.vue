@@ -91,7 +91,7 @@ export default {
 .know {
   width: 656px;
   height: 160px;
-  background: linear-gradient(
+  background-image: linear-gradient(
     90deg,
     rgba(76, 187, 250, 1) 0%,
     rgba(127, 132, 255, 1) 78%
@@ -131,7 +131,7 @@ export default {
   align-items: center;
 }
 .item {
-  width: 205.34px;
+  width: 205.3px;
   margin-bottom: 50px;
   align-items: center;
 }

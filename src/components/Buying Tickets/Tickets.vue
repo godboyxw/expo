@@ -5,11 +5,11 @@
     <text class="icon-search"
           :style="{fontFamily:'iconfont',color:'black',fontSize:'33px'}">{{"\ue615"}}</text>
     <div class="sort">
-      <div class="box">
+      <div class="box"
+           @click="show = !show">
         <text class="text"
               :class="show ? 'active' : ''">综合排序</text>
         <text class="icon-back"
-              @click="show = !show"
               :style="{fontFamily:'iconfont',color:'#555555',fontSize:'22px'}">{{show ? '\ue622' : '\ue61f'}}</text>
       </div>
       <div class="box">

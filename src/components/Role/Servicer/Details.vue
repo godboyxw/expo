@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
+  <div class="detail">
     <headerTop :title="title"
                :router="router"></headerTop>
     <text class="icon-point"
-          :style="{fontFamily:'iconfont',color:'#313131',fontSize:'35px',position:'fixed',right:'10px',top:'35px',zIndex:'999'}">{{"\ue663"}}</text>
+          :style="{fontFamily:'iconfont',color:'#313131',fontSize:'30px',position:'fixed',right:'10px',top:'30px',zIndex:'999'}">{{"\ue66c"}}</text>
     <div class="explain">
       <text class="explain-text">支付说明</text>
       <text class="icon-question"
@@ -48,6 +48,8 @@
               :style="{fontFamily:'iconfont',fontSize:'20px',color:'#5D5D5D'}">{{'\ue648'}}</text>
       </div>
       <div class="should-pay">
+        <div class="dot dot1"></div>
+        <div class="dot dot2"></div>
         <text class="should">应付金额</text>
         <text class="amount">¥ 12.00</text>
       </div>
@@ -80,10 +82,10 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.detail {
   width: 750px;
   min-height: 100vh;
-  background: #eeeeee;
+  background-color: #eeeeee;
 }
 .explain {
   width: 656px;
@@ -114,7 +116,7 @@ export default {
   width: 656px;
   border-bottom: 1px solid #d2d2d2;
   padding-top: 33px;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
 }
 .title {
   padding-left: 32px;
@@ -213,10 +215,25 @@ export default {
   border-top: 1px solid #d2d2d2;
   padding-left: 41px;
   padding-right: 32px;
-  background: rgba(255, 255, 255, 1);
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.dot {
+  width: 16px;
+  height: 16px;
+  background-color: #eeeeee;
+  border-radius: 8px;
+  position: absolute;
+  top: -8px;
+}
+.dot1 {
+  left: -8px;
+}
+.dot2 {
+  right: -8px;
 }
 .should {
   font-size: 28px;
@@ -259,7 +276,7 @@ export default {
   width: 600px;
   height: 80px;
   align-self: center;
-  background: rgba(30, 127, 209, 1);
+  background-color: rgba(30, 127, 209, 1);
   border-radius: 40px;
   font-size: 30px;
   text-align: center;
