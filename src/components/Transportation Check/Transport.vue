@@ -44,9 +44,8 @@
       </div>
     </div>
     <div class="map">
-      <!--<image style="width:750px;height:463px"
-             src='https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1671204792,3567887483&fm=58' /> -->
       <bMap></bMap>
+      <!-- <AMap></AMap> -->
       <div class="check">
         <div class="nav">
           <div v-for="(item, index) in nav"
@@ -88,6 +87,7 @@
         </transition>
       </div>
     </div>
+    <div id="log"></div>
   </div>
 </template>
 
@@ -95,12 +95,14 @@
 import headerTop from '../Common/headerTop'
 import nav from '../Common/Nav'
 import bMap from './bMap'
-import { routeSearch } from '../../util/map.js'
+import AMap from './AMap'
+import { DrivingRoute, TransitRoute } from '../../util/map.js'
 export default {
   components: {
     headerTop,
     nav,
-    bMap
+    bMap,
+    AMap
   },
   data () {
     return {
@@ -144,7 +146,11 @@ export default {
       this.to = this.transfer
     },
     search (x, y) {
-      routeSearch(x, y)
+      if (this.key === 0) {
+        TransitRoute(x, y)
+      } else if (this.key === 5) {
+        DrivingRoute(x, y)
+      }
     },
     // search () {
     //   routeSearch(this.from, this.to)
@@ -156,6 +162,9 @@ export default {
     focusTo () {
       this.to = ''
     }
+  },
+  mounted () {
+    console.log(this)
   }
 }
 </script>

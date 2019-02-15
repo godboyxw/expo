@@ -68,7 +68,7 @@ export default {
 .date {
   font-size: 24px;
   line-height: 24px;
-  margin-bottom: 49px;
+  margin-bottom: 30px;
   font-family: Adobe Heiti Std R;
   font-weight: normal;
   color: rgba(131, 131, 131, 1);

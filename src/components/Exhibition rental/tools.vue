@@ -53,11 +53,11 @@ export default {
   created () {
     EventBus.$on('cancel', (a) => {
       this.isShow = a
-      // console.log(this.isShow, a) // false false
+      // console.log(this.isShow, a) // false  false
     })
     EventBus.$on('show', (b) => {
       this.isShow = b
-      // console.log(this.isShow, b) // true true
+      // console.log(this.isShow, b) // true  true
     })
   }
 }

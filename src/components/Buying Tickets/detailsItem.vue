@@ -68,8 +68,10 @@ export default {
   height: 40px;
   margin-left: 21px;
   margin-bottom: 14px;
-  background: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(8, 117, 209, 1);
+  background-color: rgba(255, 255, 255, 1);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(8, 117, 209, 1);
   border-radius: 10px;
   font-size: 22px;
   text-align: center;
@@ -86,7 +88,7 @@ export default {
 .card {
   width: 30px;
   height: 30px;
-  background: rgba(254, 122, 76, 1);
+  background-color: rgba(254, 122, 76, 1);
   border-radius: 6px;
   font-size: 20px;
   text-align: center;
@@ -106,7 +108,7 @@ export default {
 .purchase {
   width: 160px;
   height: 60px;
-  background: rgba(8, 117, 209, 1);
+  background-color: rgba(8, 117, 209, 1);
   position: absolute;
   right: 21px;
   top: 130px;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="details">
     <headerTop :title="title"
                :router="router"></headerTop>
     <div class="wrapper">
@@ -34,6 +34,9 @@ export default {
 </script>
 
 <style scoped>
+.details {
+  width: 750px;
+}
 .detailsItem {
   margin-bottom: 30px;
   align-self: center;

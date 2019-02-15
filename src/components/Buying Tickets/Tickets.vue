@@ -103,6 +103,7 @@ export default {
 
 <style scoped>
 .tickets {
+  width: 750px;
   position: relative;
 }
 .icon-search {

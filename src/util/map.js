@@ -41,7 +41,7 @@
 // })
 // driving.search('临空1号', '武汉市国博中心')
 
-export function routeSearch (x, y) {
+export function DrivingRoute (x, y) {
   let map = new window.BMap.Map('bmap') // 创建Map实例
   let driving = new window.BMap.DrivingRoute(map, {
     renderOptions: {
@@ -51,4 +51,52 @@ export function routeSearch (x, y) {
     }
   })
   driving.search(x, y)
+}
+
+export function TransitRoute (x, y) {
+  // let map = new window.BMap.Map('bmap') // 创建Map实例
+  // // map.centerAndZoom(new window.BMap.Point(114.1436167638, 30.6328571114), 18)
+  // var transit = new window.BMap.TransitRoute(map, {
+  //   renderOptions: {
+  //     map: map,
+  //     panel: 'results'
+  //   }
+  // })
+  // transit.search(x, y)
+
+  let map = new window.BMap.Map('bmap') // 创建Map实例
+  map.centerAndZoom(new window.BMap.Point(114.1436167638, 30.6328571114), 10)
+  map.enableScrollWheelZoom()
+  var transit = new window.BMap.TransitRoute(map, {
+    renderOptions: {
+      map: map
+    },
+    onSearchComplete: function (result) {
+      if (transit.getStatus() === window.BMAP_STATUS_SUCCESS) {
+        var firstPlan = result.getPlan(0)
+        // 绘制步行线路
+        for (var i = 0; i < firstPlan.getNumRoutes(); i++) {
+          var walk = firstPlan.getRoute(i)
+          if (walk.getDistance(false) > 0) {
+            // 步行线路有可能为0
+            map.addOverlay(new window.BMap.Polyline(walk.getPath(), {
+              lineColor: 'green'
+            }))
+          }
+        }
+        // 绘制公交线路
+        for (i = 0; i < firstPlan.getNumLines(); i++) {
+          var line = firstPlan.getLine(i)
+          map.addOverlay(new window.BMap.Polyline(line.getPath()))
+        }
+        // 输出方案信息
+        var s = []
+        for (i = 0; i < result.getNumPlans(); i++) {
+          s.push((i + 1) + '. ' + result.getPlan(i).getDescription(false))
+        }
+        document.getElementById('log').innerHTML = s.join('<br/>')
+      }
+    }
+  })
+  transit.search(x, y)
 }
