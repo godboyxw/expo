@@ -86,11 +86,11 @@ export default {
   width: 750px;
   min-height: 100vh;
   background-color: #eeeeee;
+  align-items: center;
 }
 .explain {
   width: 656px;
   height: 63px;
-  margin: 0 auto;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
@@ -109,7 +109,7 @@ export default {
 .top {
   width: 656px;
   height: 10px;
-  background: rgba(30, 127, 209, 1);
+  background-color: rgba(30, 127, 209, 1);
   border-radius: 4px 4px 0px 0px;
 }
 .info {
@@ -186,7 +186,7 @@ export default {
 .pay {
   width: 655px;
   height: 80px;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
   padding-left: 37px;
   padding-right: 32px;
   flex-direction: row;

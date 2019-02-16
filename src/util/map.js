@@ -100,3 +100,31 @@ export function TransitRoute (x, y) {
   })
   transit.search(x, y)
 }
+
+export function Transfer (x, y) {
+  window.init = function () {
+    // 基本地图加载
+    var map = new window.AMap.Map('amap', {
+      zoom: 13, // 级别
+      resizeEnable: true, // 自适应大小
+      center: [114.1436167638, 30.6328571114], // 中心点坐标
+      // pitch: 75, // 地图俯仰角度，有效范围 0 度- 83 度
+      viewMode: '3D' // 使用3D视图
+    })
+    // 构造路线导航类
+    var driving = new window.AMap.Driving({
+      map: map,
+      panel: 'panel'
+    })
+    // 根据起终点名称规划驾车导航路线
+    driving.search([{
+      keyword: x,
+      city: '武汉'
+    },
+    {
+      keyword: y,
+      city: '武汉'
+    }
+    ])
+  }
+}

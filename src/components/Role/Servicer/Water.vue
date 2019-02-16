@@ -125,9 +125,16 @@ export default {
 }
 .use {
   min-height: 316px;
-  padding: 39px 0 26px 24px;
-  border-top: 4px solid #eee;
-  border-bottom: 10px solid rgba(238, 238, 238, 1);
+  padding-top: 39px;
+  padding-right: 0;
+  padding-bottom: 26px;
+  padding-left: 24px;
+  border-top-width: 4px;
+  border-top-style: solid;
+  border-top-color: #eee;
+  border-bottom-width: 10px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(238, 238, 238, 1);
 }
 .title {
   font-size: 32px;
@@ -148,13 +155,14 @@ export default {
   flex-direction: row;
 }
 .sum {
-  /**width: 71.6%;**/
   flex: 1;
   height: 96px;
   flex-direction: row;
   justify-content: center;
-  background: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(238, 238, 238, 1);
+  background-color: rgba(255, 255, 255, 1);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(238, 238, 238, 1);
 }
 .total,
 .money {
@@ -172,9 +180,9 @@ export default {
   font-size: 36px;
 }
 .pay-now {
-  width: 28.4%;
+  width: 213px;
   height: 96px;
-  background: rgba(47, 145, 255, 1);
+  background-color: rgba(47, 145, 255, 1);
   text-align: center;
   font-size: 36px;
   font-family: DengXian;

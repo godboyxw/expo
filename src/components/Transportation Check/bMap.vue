@@ -61,13 +61,6 @@ export default {
 
     var marker = new window.BMap.Marker(point)// 创建标注
     map.addOverlay(marker)
-    // var driving = new window.BMap.DrivingRoute(map, {
-    //   renderOptions: {
-    //     map: map,
-    //     autoViewport: true
-    //   }
-    // })
-    // driving.search('临空1号', '武汉市国博中心')
   }
 }
 </script>

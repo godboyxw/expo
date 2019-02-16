@@ -133,13 +133,18 @@ export default {
 }
 .main {
   width: 750px;
-  padding: 64px 20px 0 20px;
-  border-top: 8px solid #f8f8f8;
+  padding-top: 64px;
+  padding-right: 20px;
+  padding-bottom: 0;
+  padding-left: 20px;
+  border-top-width: 8px;
+  border-top-style: solid;
+  border-top-color: #f8f8f8;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .item {
-  width: 33.33%;
+  width: 236px;
   align-items: center;
 }
 .select-amount {
@@ -147,8 +152,10 @@ export default {
   height: 135px;
   margin-bottom: 27px;
   position: relative;
-  background: rgba(255, 255, 255, 1);
-  border: 2px solid rgba(227, 227, 227, 1);
+  background-color: rgba(255, 255, 255, 1);
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(227, 227, 227, 1);
   border-radius: 6px;
   justify-content: center;
   align-items: center;
@@ -188,13 +195,15 @@ export default {
   flex-direction: row;
 }
 .sum {
-  /**width: 71.6%;**/
   flex: 1;
   height: 96px;
   flex-direction: row;
   justify-content: center;
-  background: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(238, 238, 238, 1);
+  background-color: rgba(255, 255, 255, 1);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(238, 238, 238, 1);
+  border-radius: 6px;
 }
 .total,
 .money {
@@ -212,9 +221,9 @@ export default {
   font-size: 36px;
 }
 .pay-now {
-  width: 28.4%;
+  width: 213px;
   height: 96px;
-  background: rgba(47, 145, 255, 1);
+  background-color: rgba(47, 145, 255, 1);
   text-align: center;
   font-size: 36px;
   font-family: DengXian;

@@ -34,14 +34,14 @@ export default {
   mounted () {
     var map = new window.AMap.Map('amap', {
       zoom: 13, // 级别
+      resizeEnable: true, // 自适应大小
       center: [this.longitude, this.latitude], // 中心点坐标
+      // pitch: 75, // 地图俯仰角度，有效范围 0 度- 83 度
       viewMode: '3D'// 使用3D视图
     })
-    // 实时路况图层
-    var trafficLayer = new window.AMap.TileLayer.Traffic({
-      zIndex: 10
+    map.plugin(['AMap.ToolBar'], function () {
+      map.addControl(new window.AMap.ToolBar())
     })
-    map.add(trafficLayer)// 添加图层到地图
   }
 }
 </script>

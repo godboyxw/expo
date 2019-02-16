@@ -500,6 +500,7 @@ export default {
   font-size: 18px;
   font-family: SourceHanSansCN-Regular;
   font-weight: 400;
+  text-align: center;
   color: rgba(255, 255, 255, 1);
 }
 .footer {

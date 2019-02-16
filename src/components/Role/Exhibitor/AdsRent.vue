@@ -228,8 +228,9 @@ export default {
 .regular {
   width: 750px;
   height: 131px;
-  padding: 0 26px 0 69px;
-  background: linear-gradient(
+  padding-right: 26px;
+  padding-left: 69px;
+  background-image: linear-gradient(
     -90deg,
     rgba(253, 185, 45, 1) 0%,
     rgba(239, 137, 55, 1) 100%
@@ -253,12 +254,14 @@ export default {
 }
 .main {
   width: 750px;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
 }
 .title {
   height: 89px;
   padding-left: 31px;
-  border-bottom: 1px solid #eee;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #eee;
   font-size: 32px;
   font-family: Adobe Heiti Std R;
   font-weight: normal;
@@ -268,11 +271,14 @@ export default {
 .item-wrapper {
   min-height: 329px;
   padding-top: 30px;
-  border-bottom: 20px solid rgba(238, 238, 238, 1);
+  border-bottom-width: 20px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(238, 238, 238, 1);
 }
 .item-container {
   width: 750px;
-  padding: 0px 29px 0 29px;
+  padding-right: 29px;
+  padding-left: 29px;
   position: relative;
   flex-direction: row;
   flex-wrap: wrap;
@@ -281,10 +287,13 @@ export default {
 .item {
   width: 320px;
   height: 234px;
-  padding: 37px 0 8px 0;
+  padding-top: 37px;
+  padding-bottom: 8px;
   margin-bottom: 30px;
-  background: rgba(255, 255, 255, 1);
-  border: 2px solid rgba(210, 210, 210, 1);
+  background-color: rgba(255, 255, 255, 1);
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(210, 210, 210, 1);
   border-radius: 6px;
 }
 .place {

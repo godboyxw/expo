@@ -114,12 +114,13 @@ export default {
 .sort {
   width: 750px;
   height: 60px;
-  padding: 0 124px;
+  padding-left: 124px;
+  padding-right: 124px;
   margin-bottom: 21px;
   border-top: 11px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   position: relative;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -138,7 +139,7 @@ export default {
 .lists {
   flex-direction: row;
   position: absolute;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
   z-index: 100;
   left: 0;
   top: 60px;
@@ -148,7 +149,9 @@ export default {
   height: 90px;
   padding-left: 40px;
   padding-right: 53px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #eee;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;

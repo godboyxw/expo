@@ -68,7 +68,7 @@ export default {
   position: fixed;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
   flex-direction: row;
   justify-content: center;
 }

@@ -44,8 +44,8 @@
       </div>
     </div>
     <div class="map">
-      <bMap></bMap>
-      <!-- <AMap></AMap> -->
+      <!-- <bMap></bMap> -->
+      <AMap></AMap>
       <div class="check">
         <div class="nav">
           <div v-for="(item, index) in nav"
@@ -96,7 +96,7 @@ import headerTop from '../Common/headerTop'
 import nav from '../Common/Nav'
 import bMap from './bMap'
 import AMap from './AMap'
-import { DrivingRoute, TransitRoute } from '../../util/map.js'
+import { DrivingRoute, TransitRoute, Transfer } from '../../util/map.js'
 export default {
   components: {
     headerTop,
@@ -146,11 +146,12 @@ export default {
       this.to = this.transfer
     },
     search (x, y) {
-      if (this.key === 0) {
-        TransitRoute(x, y)
-      } else if (this.key === 5) {
-        DrivingRoute(x, y)
-      }
+      Transfer(x, y)
+      // if (this.key === 0) {
+      //   TransitRoute(x, y)
+      // } else if (this.key === 5) {
+      //   DrivingRoute(x, y)
+      // }
     },
     // search () {
     //   routeSearch(this.from, this.to)

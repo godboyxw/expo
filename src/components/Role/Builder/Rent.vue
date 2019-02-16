@@ -72,7 +72,7 @@ export default {
   width: 750px;
   height: 96px;
   padding-left: 32px;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -93,7 +93,7 @@ export default {
   align-items: center;
   width: 750px;
   height: 90px;
-  background: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1);
 }
 .text-nav {
   text-align: center;
@@ -105,7 +105,9 @@ export default {
 }
 .active {
   color: rgba(8, 117, 209, 1);
-  border-bottom: 4px solid rgba(8, 117, 209, 1);
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(8, 117, 209, 1);
 }
 .fade-enter-active,
 .fade-leave-active {

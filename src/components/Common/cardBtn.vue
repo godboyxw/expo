@@ -81,8 +81,10 @@ export default {
   height: 135px;
   margin-bottom: 24px;
   position: relative;
-  background: rgba(255, 255, 255, 1);
-  border: 2px solid rgba(227, 227, 227, 1);
+  background-color: rgba(255, 255, 255, 1);
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(227, 227, 227, 1);
   border-radius: 6px;
   justify-content: center;
   align-items: center;
