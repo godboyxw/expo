@@ -41,23 +41,13 @@ export default {
         window.BMAP_NORMAL_MAP,
         window.BMAP_HYBRID_MAP
       ] }))
-    // var overView = new window.BMap.OverviewMapControl()
-    // var overViewOpen = new window.BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT })
-    // map.addControl(overView) // 添加默认缩略地图控件
-    // map.addControl(overViewOpen) // 右下角，打开
-
-    // setTimeout(function () {
-    //   map.setZoom(14)
-    // }, 2000) // 2秒后放大到14级
 
     map.enableScrollWheelZoom(true) // 开启鼠标滚轮缩放
 
     var topLeftControl = new window.BMap.ScaleControl({ anchor: window.BMAP_ANCHOR_TOP_LEFT })// 左上角，添加比例尺
     var topLeftNavigation = new window.BMap.NavigationControl() // 左上角，添加默认缩放平移控件
-    // var top_right_navigation = new window.BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL }) // 右上角，仅包含平移和缩放按钮
     map.addControl(topLeftControl)
     map.addControl(topLeftNavigation)
-    // map.addControl(top_right_navigation)
 
     var marker = new window.BMap.Marker(point)// 创建标注
     map.addOverlay(marker)

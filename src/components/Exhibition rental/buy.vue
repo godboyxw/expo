@@ -71,9 +71,7 @@ export default {
   },
   methods: {
     back () {
-      // this.$emit('show')
       EventBus.$emit('cancel', this.block)
-      // console.log(1)
     },
     next () {
       if (this.key1 === '' || this.key2 === '') {
